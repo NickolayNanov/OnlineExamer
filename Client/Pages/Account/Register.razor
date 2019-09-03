@@ -1,0 +1,48 @@
+﻿@page "/register"
+@inject IUriHelper UriHelper
+@inject HttpClient Http
+@inject IAuthService AuthService
+<h1>Register</h1>
+
+@if (ShowErrors)
+{
+    <div class="alert alert-danger" role="alert">
+        @foreach (var Error in Errors)
+        {
+            <p>@Error</p>
+        }
+    </div>
+}
+
+<TextField @bind-Value="Email" />
+<PasswordField @bind-Value="Password" />
+<PasswordField @bind-Value="ConfirmPassword" />
+
+<input type="submit" class="btn btn-success" @onclick="@Submit" />
+
+@code {
+
+    public string Email { get; set; }
+    public string Password { get; set; }
+    public string ConfirmPassword { get; set; }
+
+    private RegisterModel RegisterModel = new RegisterModel();
+    private bool ShowErrors;
+    private IEnumerable<string> Errors;
+
+    protected async Task Submit()
+    {
+        RegisterModel model = new RegisterModel { Email = Email, Password = Password, ConfirmPassword = ConfirmPassword };
+        var result = await this.AuthService.Register(model);
+
+        if (result.Successful)
+        {
+            this.UriHelper.NavigateTo("/login");
+        }
+        else
+        {
+            ShowErrors = true;
+            Errors = result.Errors;
+        }
+    }
+}

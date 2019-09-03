@@ -1,0 +1,47 @@
+﻿@page "/login"
+@inject IUriHelper uriHelper
+@inject HttpClient Http
+@inject IAuthService AuthService
+<h3>Login</h3>
+
+@if (ShowErrors)
+{
+    <div class="alert alert-danger" role="alert">
+        <p>@Error</p>
+    </div>
+}
+
+<TextField @bind-Value="Email" />
+<PasswordField @bind-Value="Password" />
+<input type="submit" class="btn btn-success" value="Submit" @onclick="Submit" />
+
+@code {
+
+    public string Email { get; set; }
+    public string Password { get; set; }
+
+    public class TokenResponseModel
+    {
+        public string Token { get; set; }
+    }
+
+    private bool ShowErrors;
+    private string Error = "";
+
+    protected async Task Submit()
+    {
+        LoginModel loginModel = new LoginModel { Email = Email, Password = Password };
+
+        var result = await this.AuthService.Login(loginModel);
+
+        if (result.Successful)
+        {
+            this.uriHelper.NavigateTo("/authentication");
+        }
+        else
+        {
+            this.ShowErrors = true;
+            Error = result.Error;
+        }
+    }
+}

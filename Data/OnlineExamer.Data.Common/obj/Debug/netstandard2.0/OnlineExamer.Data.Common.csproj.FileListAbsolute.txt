@@ -1,0 +1,7 @@
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\bin\Debug\netstandard2.0\OnlineExamer.Data.Common.deps.json
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\bin\Debug\netstandard2.0\OnlineExamer.Data.Common.dll
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\bin\Debug\netstandard2.0\OnlineExamer.Data.Common.pdb
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debug\netstandard2.0\OnlineExamer.Data.Common.AssemblyInfoInputs.cache
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debug\netstandard2.0\OnlineExamer.Data.Common.AssemblyInfo.cs
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debug\netstandard2.0\OnlineExamer.Data.Common.dll
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debug\netstandard2.0\OnlineExamer.Data.Common.pdb

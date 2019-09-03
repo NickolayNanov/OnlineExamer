@@ -1,0 +1,13 @@
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\bin\Debug\netstandard2.0\OnlineExamer.Data.deps.json
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\bin\Debug\netstandard2.0\OnlineExamer.Data.dll
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\obj\Debug\netstandard2.0\OnlineExamer.Data.csprojAssemblyReference.cache
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\obj\Debug\netstandard2.0\OnlineExamer.Data.AssemblyInfoInputs.cache
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\obj\Debug\netstandard2.0\OnlineExamer.Data.AssemblyInfo.cs
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\bin\Debug\netstandard2.0\OnlineExamer.Domain.dll
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\bin\Debug\netstandard2.0\OnlineExamer.Data.pdb
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\bin\Debug\netstandard2.0\OnlineExamer.Data.Common.dll
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\bin\Debug\netstandard2.0\OnlineExamer.Domain.pdb
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\bin\Debug\netstandard2.0\OnlineExamer.Data.Common.pdb
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\obj\Debug\netstandard2.0\OnlineExamer.Data.csproj.CopyComplete
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\obj\Debug\netstandard2.0\OnlineExamer.Data.dll
+D:\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data\obj\Debug\netstandard2.0\OnlineExamer.Data.pdb
