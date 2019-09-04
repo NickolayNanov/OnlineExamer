@@ -1,19 +1,34 @@
 ﻿@page "/login"
-@inject IUriHelper uriHelper
-@inject HttpClient Http
-@inject IAuthService AuthService
 <h3>Login</h3>
+@inject IAuthService AuthService
+@inject IUriHelper UriHelper
 
-@if (ShowErrors)
-{
-    <div class="alert alert-danger" role="alert">
-        <p>@Error</p>
+<div class="row">
+    <div class="col-md-6">
+        <section>
+            <form>
+                <hr class="text-danger" />
+                @if (ShowErrors)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        <p>@Error</p>
+                    </div>
+                }
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" @bind="Email" class="form-control" placeholder="Email... eg: John@gmail.com"/>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" @bind="Password" class="form-control" placeholder="Password..."/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" @onclick="Submit" class="form-control btn btn-success"/>
+                </div>
+            </form>
+        </section>
     </div>
-}
-
-<TextField @bind-Value="Email" />
-<PasswordField @bind-Value="Password" />
-<input type="submit" class="btn btn-success" value="Submit" @onclick="Submit" />
+</div>
 
 @code {
 
@@ -25,7 +40,7 @@
         public string Token { get; set; }
     }
 
-    private bool ShowErrors;
+    private bool ShowErrors = false;
     private string Error = "";
 
     protected async Task Submit()
@@ -36,7 +51,7 @@
 
         if (result.Successful)
         {
-            this.uriHelper.NavigateTo("/authentication");
+            this.UriHelper.NavigateTo("/profile");
         }
         else
         {
@@ -45,3 +60,4 @@
         }
     }
 }
+

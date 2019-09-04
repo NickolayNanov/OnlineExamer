@@ -42,11 +42,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        string token = await AuthService.GetAuthToken();
-        if (!Http.DefaultRequestHeaders.Contains("Authorization"))
-        {
-            Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
-        }
         forecasts = await Http.GetJsonAsync<WeatherForecast[]>("api/WeatherForecast");
     }
 }

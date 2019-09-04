@@ -212,10 +212,6 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\static
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\staticwebassets\OnlineExamer.Client.StaticWebAssets.xml
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\OnlineExamer.Client.RazorComponent.input.cache
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\RazorDeclaration\App.razor.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\RazorDeclaration\Components\LoginComponent.razor.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\RazorDeclaration\Components\PasswordField.razor.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\RazorDeclaration\Components\TextField.razor.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\RazorDeclaration\Pages\Account\AuthPage.razor.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\RazorDeclaration\Pages\Account\Login.razor.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\RazorDeclaration\Pages\Account\Register.razor.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\RazorDeclaration\Pages\Counter.razor.g.cs
@@ -231,10 +227,6 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Online
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\OnlineExamer.Client.TagHelpers.output.cache
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\OnlineExamer.Client.RazorCoreGenerate.cache
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Razor\App.razor.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Razor\Components\LoginComponent.razor.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Razor\Components\PasswordField.razor.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Razor\Components\TextField.razor.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Razor\Pages\Account\AuthPage.razor.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Razor\Pages\Account\Login.razor.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Razor\Pages\Account\Register.razor.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\obj\Debug\netstandard2.0\Razor\Pages\Counter.razor.g.cs

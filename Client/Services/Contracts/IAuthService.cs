@@ -12,6 +12,6 @@
 
         Task<RegisterResult> Register(RegisterModel registerModel);
 
-        Task<string> GetAuthToken();
+        //Task SetAuthenticationHeaderHeaderAsync();
     }
 }

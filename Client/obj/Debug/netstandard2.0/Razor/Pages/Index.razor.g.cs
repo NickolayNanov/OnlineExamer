@@ -50,16 +50,11 @@ using OnlineExamer.Shared.Models;
 #line default
 #line hidden
 #line 9 "D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\_Imports.razor"
-using OnlineExamer.Client.Components;
-
-#line default
-#line hidden
-#line 10 "D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\_Imports.razor"
 using OnlineExamer.Client.Services.Contracts;
 
 #line default
 #line hidden
-#line 11 "D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\_Imports.razor"
+#line 10 "D:\OnlineExamer\OnlineExamer\OnlineExamer\Client\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default

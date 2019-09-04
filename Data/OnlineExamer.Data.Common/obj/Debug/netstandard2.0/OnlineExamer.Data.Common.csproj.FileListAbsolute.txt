@@ -12,3 +12,4 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debu
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debug\netstandard2.0\OnlineExamer.Data.Common.AssemblyInfo.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debug\netstandard2.0\OnlineExamer.Data.Common.dll
 D:\OnlineExamer\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debug\netstandard2.0\OnlineExamer.Data.Common.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\Data\OnlineExamer.Data.Common\obj\Debug\netstandard2.0\OnlineExamer.Data.Common.csprojAssemblyReference.cache
