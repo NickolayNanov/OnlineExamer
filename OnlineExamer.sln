@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineExamer.Data.Common", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineExamer.Domain", "Data\OnlineExamer.Domain\OnlineExamer.Domain.csproj", "{C6C57556-8B47-4303-BB08-C997B4E2A583}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineExamer.Common", "OnlineExamer.Common\OnlineExamer.Common.csproj", "{825337E7-48F8-499F-8718-23030830382A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineExamer.Common", "OnlineExamer.Common\OnlineExamer.Common.csproj", "{825337E7-48F8-499F-8718-23030830382A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

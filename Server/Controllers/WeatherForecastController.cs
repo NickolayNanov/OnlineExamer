@@ -4,12 +4,11 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Logging;
-    using Microsoft.AspNetCore.Authorization;
-
     using OnlineExamer.Shared;
+
+    using Microsoft.AspNetCore.Mvc;  
     using Microsoft.Extensions.Configuration;
+    using Microsoft.AspNetCore.Authorization;
 
     [Authorize]
     public class WeatherForecastController : ApiController

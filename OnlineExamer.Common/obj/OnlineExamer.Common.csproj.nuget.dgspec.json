@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\OnlineExamer.Common.csproj": {}
+    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\OnlineExamer.Common.csproj": {}
   },
   "projects": {
-    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\OnlineExamer.Common.csproj": {
+    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\OnlineExamer.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\OnlineExamer.Common.csproj",
+        "projectUniqueName": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\OnlineExamer.Common.csproj",
         "projectName": "OnlineExamer.Common",
-        "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\OnlineExamer.Common.csproj",
+        "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\OnlineExamer.Common.csproj",
         "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\obj\\",
+        "outputPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

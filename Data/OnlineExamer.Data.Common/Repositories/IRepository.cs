@@ -2,14 +2,15 @@
 {
     using System;
     using System.Linq;
+    using System.Linq.Expressions;
     using System.Threading.Tasks;
 
     public interface IRepository<TEntity> : IDisposable
         where TEntity : class
     {
-        IQueryable<TEntity> All();
+        IQueryable<TEntity> All(Expression<Func<TEntity, bool>> expression = null);
 
-        IQueryable<TEntity> AllAsNoTracking();
+        IQueryable<TEntity> AllAsNoTracking(Expression<Func<TEntity, bool>> expression = null);
 
         void Add(TEntity entity);
 

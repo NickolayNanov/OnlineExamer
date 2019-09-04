@@ -6,6 +6,8 @@
     using Microsoft.EntityFrameworkCore;
 
     using Examer.Data.Common.Repositories;
+    using System.Linq.Expressions;
+    using System;
 
     public class EfRepository<TEntity> : IRepository<TEntity>
         where TEntity : class
@@ -26,14 +28,14 @@
             this.Context.Set<TEntity>().Add(entity);
         }
 
-        public IQueryable<TEntity> All()
+        public IQueryable<TEntity> All(Expression<Func<TEntity, bool>> expression = null)
         {
-            return this.Data;
+            return this.Data.Where(expression);
         }
 
-        public IQueryable<TEntity> AllAsNoTracking()
+        public IQueryable<TEntity> AllAsNoTracking(Expression<Func<TEntity, bool>> expression = null)
         {
-            return this.Data.AsNoTracking();
+            return this.Data.Where(expression).AsNoTracking();
         }
 
         public void Delete(TEntity entity)

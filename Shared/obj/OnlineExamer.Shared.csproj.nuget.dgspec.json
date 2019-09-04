@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OnlineExamer\\OnlineExamer\\Shared\\OnlineExamer.Shared.csproj": {}
+    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\Shared\\OnlineExamer.Shared.csproj": {}
   },
   "projects": {
-    "D:\\OnlineExamer\\OnlineExamer\\Shared\\OnlineExamer.Shared.csproj": {
+    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\Shared\\OnlineExamer.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OnlineExamer\\OnlineExamer\\Shared\\OnlineExamer.Shared.csproj",
+        "projectUniqueName": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\Shared\\OnlineExamer.Shared.csproj",
         "projectName": "OnlineExamer.Shared",
-        "projectPath": "D:\\OnlineExamer\\OnlineExamer\\Shared\\OnlineExamer.Shared.csproj",
+        "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\Shared\\OnlineExamer.Shared.csproj",
         "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "D:\\OnlineExamer\\OnlineExamer\\Shared\\obj\\",
+        "outputPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

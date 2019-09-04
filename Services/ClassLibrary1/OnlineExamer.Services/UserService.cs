@@ -1,16 +1,18 @@
 ﻿namespace OnlineExamer.Services
 {
-    using Microsoft.AspNetCore.Identity;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.IdentityModel.Tokens;
-    using OnlineExamer.Domain;
-    using OnlineExamer.Services.Contracts;
-    using OnlineExamer.Shared.Models;
     using System;
     using System.IdentityModel.Tokens.Jwt;
     using System.Security.Claims;
     using System.Text;
     using System.Threading.Tasks;
+
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.IdentityModel.Tokens;
+
+    using OnlineExamer.Domain;
+    using OnlineExamer.Services.Contracts;
+    using OnlineExamer.Shared.Models;
 
     public class UserService : IUserService
     {
@@ -18,7 +20,10 @@
         private readonly SignInManager<ExamerUser> signInManager;
         private readonly IConfiguration configuration;
 
-        public UserService(UserManager<ExamerUser> userManager, SignInManager<ExamerUser> signInManager, IConfiguration configuration)
+        public UserService(
+            UserManager<ExamerUser> userManager,
+            SignInManager<ExamerUser> signInManager,
+            IConfiguration configuration)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -50,6 +55,12 @@
         public async Task<SignInResult> LoginAsync(LoginModel loginModel)
         {
             var user = await this.userManager.FindByEmailAsync(loginModel.Email);
+
+            if(user == null)
+            {
+                user = new ExamerUser() { Email = loginModel.Email, UserName = loginModel.Email };
+            }
+
             return await this.signInManager.PasswordSignInAsync(user, loginModel.Password, true, true);
         }
 

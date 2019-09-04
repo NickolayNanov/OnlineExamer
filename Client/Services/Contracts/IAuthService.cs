@@ -11,5 +11,7 @@
         Task Logout();
 
         Task<RegisterResult> Register(RegisterModel registerModel);
+
+        Task<string> GetAuthToken();
     }
 }

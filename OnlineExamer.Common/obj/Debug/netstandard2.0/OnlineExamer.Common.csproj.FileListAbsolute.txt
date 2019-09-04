@@ -5,3 +5,10 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netstandard2.0\Online
 D:\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netstandard2.0\OnlineExamer.Common.AssemblyInfo.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netstandard2.0\OnlineExamer.Common.dll
 D:\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netstandard2.0\OnlineExamer.Common.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\bin\Debug\netstandard2.0\OnlineExamer.Common.deps.json
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\bin\Debug\netstandard2.0\OnlineExamer.Common.dll
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\bin\Debug\netstandard2.0\OnlineExamer.Common.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netstandard2.0\OnlineExamer.Common.AssemblyInfoInputs.cache
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netstandard2.0\OnlineExamer.Common.AssemblyInfo.cs
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netstandard2.0\OnlineExamer.Common.dll
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netstandard2.0\OnlineExamer.Common.pdb

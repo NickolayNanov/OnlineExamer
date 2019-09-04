@@ -1,18 +1,21 @@
 ﻿namespace OnlineExamer.Server.Controllers
 {
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.Primitives;
-    using OnlineExamer.Services.Contracts;
-    using OnlineExamer.Shared.Models;
     using System.Linq;
     using System.Threading.Tasks;
+
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+
+    using OnlineExamer.Services.Contracts;
+    using OnlineExamer.Shared.Models;
 
     public class AccountsController : ApiController
     {
         private readonly IUserService userService;
 
-        public AccountsController(IUserService userService, IConfiguration configuration)
+        public AccountsController(
+            IUserService userService,
+            IConfiguration configuration)
             : base(configuration)
         {
             this.userService = userService;
@@ -43,8 +46,7 @@
                 return this.BadRequest(new LoginResult() { Successful = false, Error = "Invalid Username or Password" });
             }
 
-            var token = this.userService.BuildToken(loginModel.Email);
-
+            var token = this.userService.BuildToken(loginModel.Email);               
             return this.Ok(new LoginResult() { Successful = true, Token = token, Email = loginModel.Email });
         }
 
@@ -57,7 +59,6 @@
             if (!result.Succeeded)
             {
                 var errors = result.Errors.Select(error => error.Description);
-
                 return this.BadRequest(new RegisterResult() { Successful = false, Errors = errors });
             }
 

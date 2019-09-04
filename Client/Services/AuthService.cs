@@ -24,6 +24,11 @@
             this.localStorage = localStorage;
         }
 
+        public async Task<string> GetAuthToken()
+        {
+            return await this.localStorage.GetItemAsync<string>("authToken");
+        }
+
         public async Task<LoginResult> Login(LoginModel loginModel)
         {
             var result = await this.httpClient.PostJsonAsync<LoginResult>("api/Accounts/Login", loginModel);
