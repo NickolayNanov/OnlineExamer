@@ -1,33 +1,20 @@
 ﻿@page "/login"
-<h3>Login</h3>
+@inject IUriHelper uriHelper
+@inject HttpClient Http
 @inject IAuthService AuthService
-@inject IUriHelper UriHelper
+<h3>Login</h3>
 
-<div class="row">
-    <div class="col-md-6">
-        <section>
-            <form>
-                <hr class="text-danger" />
-                @if (ShowErrors)
-                {
-                    <div class="alert alert-danger" role="alert">
-                        <p>@Error</p>
-                    </div>
-                }
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" @bind="Email" class="form-control" placeholder="Email... eg: John@gmail.com"/>
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" @bind="Password" class="form-control" placeholder="Password..."/>
-                </div>
-                <div class="form-group">
-                    <input type="submit" @onclick="Submit" class="form-control btn btn-success"/>
-                </div>
-            </form>
-        </section>
+@if (!string.IsNullOrWhiteSpace(Error))
+{
+    <div class="alert alert-danger" role="alert">
+        <p>@Error</p>
     </div>
+}
+
+<div class="col-md-6">
+    <TextField @bind-Value="Email" Placeholder="Е-Поща... ivan@abv.bg" />
+    <PasswordField @bind-Value="Password" Placeholder="Парола" />
+    <input type="submit" class="btn btn-primary" value="Submit" @onclick="Submit" />
 </div>
 
 @code {
@@ -40,7 +27,6 @@
         public string Token { get; set; }
     }
 
-    private bool ShowErrors = false;
     private string Error = "";
 
     protected async Task Submit()
@@ -48,16 +34,10 @@
         LoginModel loginModel = new LoginModel { Email = Email, Password = Password };
 
         var result = await this.AuthService.Login(loginModel);
-
+        Error = result.Error;
         if (result.Successful)
         {
-            this.UriHelper.NavigateTo("/profile");
-        }
-        else
-        {
-            this.ShowErrors = true;
-            Error = result.Error;
+            this.uriHelper.NavigateTo("/profile");
         }
     }
 }
-

@@ -19,6 +19,7 @@ namespace OnlineExamer.Client
             services.AddSingleton<AuthenticationStateProvider, OnlineExamerStateProvider>();
             services.AddSingleton<ITokenService, TokenService>();
             services.AddTransient<IAuthService, AuthService>();
+            services.AddSingleton<IApiService, ApiService>();
         }
         public void Configure(IComponentsApplicationBuilder app)
         {

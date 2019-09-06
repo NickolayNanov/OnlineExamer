@@ -92,6 +92,7 @@ namespace OnlineExamer.Server
             app.UseClientSideBlazorFiles<Client.Startup>();
 
             app.UseRouting();
+
             app.UseCors(options =>
             {
                 options.AllowAnyOrigin();
@@ -99,11 +100,10 @@ namespace OnlineExamer.Server
                 options.AllowAnyHeader();
             });
 
-
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseHttpsRedirection();
+            app.UseHttpsRedirection(); 
 
             app.UseEndpoints(endpoints =>
             {

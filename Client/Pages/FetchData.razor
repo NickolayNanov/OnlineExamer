@@ -1,8 +1,7 @@
 ﻿@page "/fetchdata"
 @using OnlineExamer.Shared
 @inject HttpClient Http
-@inject ITokenService TokenService
-@inject IAuthService AuthService
+@inject IApiService ApiService
 
 <h1>Weather forecast</h1>
 
@@ -39,9 +38,12 @@ else
 
 @code {
     WeatherForecast[] forecasts;
+    ApiResponse<WeatherForecast[]> response;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetJsonAsync<WeatherForecast[]>("api/WeatherForecast");
+        response = await ApiService.GetForecastAsync();
+        forecasts = response.Data;
+        this.StateHasChanged();
     }
 }

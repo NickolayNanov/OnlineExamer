@@ -24,14 +24,10 @@
             this.localStorage = localStorage;
         }
 
-        //public async Task SetAuthenticationHeaderHeaderAsync()
-        //{
-        //    var token = await this.localStorage.GetItemAsync<string>("authToken");
-        //    if (token != null)
-        //    {
-        //        this.httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
-        //    }
-        //}
+        public async Task<string> GetAuthToken()
+        {
+            return await this.localStorage.GetItemAsync<string>("authToken");
+        }
 
         public async Task<LoginResult> Login(LoginModel loginModel)
         {

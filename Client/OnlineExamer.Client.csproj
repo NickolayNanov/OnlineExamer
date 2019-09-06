@@ -16,8 +16,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Shared\OnlineExamer.Shared.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components\" />
-  </ItemGroup>
 
 </Project>
