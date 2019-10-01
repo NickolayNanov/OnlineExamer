@@ -1,0 +1,17 @@
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Services.deps.json
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Services.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Services.pdb
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Common.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Models.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.pdb
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.pdb
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Models.pdb
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\bin\Debug\netcoreapp3.0\OnlineExamer.Common.pdb
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\obj\Debug\netcoreapp3.0\OnlineExamer.Services.csprojAssemblyReference.cache
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\obj\Debug\netcoreapp3.0\OnlineExamer.Services.AssemblyInfoInputs.cache
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\obj\Debug\netcoreapp3.0\OnlineExamer.Services.AssemblyInfo.cs
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\obj\Debug\netcoreapp3.0\OnlineExamer.Services.csproj.CopyComplete
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\obj\Debug\netcoreapp3.0\OnlineExamer.Services.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Services\obj\Debug\netcoreapp3.0\OnlineExamer.Services.pdb

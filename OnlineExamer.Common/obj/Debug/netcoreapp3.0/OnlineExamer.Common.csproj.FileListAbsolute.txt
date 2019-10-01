@@ -1,0 +1,7 @@
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Common\bin\Debug\netcoreapp3.0\OnlineExamer.Common.deps.json
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Common\bin\Debug\netcoreapp3.0\OnlineExamer.Common.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Common\bin\Debug\netcoreapp3.0\OnlineExamer.Common.pdb
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Common.AssemblyInfoInputs.cache
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Common.AssemblyInfo.cs
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Common.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Common.pdb

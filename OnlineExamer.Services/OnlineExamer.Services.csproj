@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineExamer.Data.Common\OnlineExamer.Data.Common.csproj" />
+    <ProjectReference Include="..\OnlineExamer.Data.Domain\OnlineExamer.Data.Domain.csproj" />
+    <ProjectReference Include="..\OnlineExamer.Models\OnlineExamer.Models.csproj" />
+  </ItemGroup>
+
+</Project>

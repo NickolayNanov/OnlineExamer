@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "SubjectsAll";
+    @model IEnumerable<OnlineExamer.Models.SchoolSubjects.SchooolSubjectViewModel>
+    int index = 1;
+}
+
+<h1 class="text-center">Училищни предмети</h1>
+<table class="table table-hover">
+    <thead class="subject-table">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Име</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var subject in Model)
+        {
+            <tr>
+                <td scope="row">@(index++)</td>
+                <td>@subject.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <h1 class="text-center">Всички предмети, които платформата поддържа</h1>
+    <p>Това са най-често търсените предмети, но ако смятате, че някои предмет липсва се свържете с мен на е-поща: nickolaynanov17@gmail.com</p>
+
+</div>
