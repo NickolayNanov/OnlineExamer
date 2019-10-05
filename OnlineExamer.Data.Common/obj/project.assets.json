@@ -590,11 +590,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj",
+      "projectUniqueName": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj",
       "projectName": "OnlineExamer.Data.Common",
-      "projectPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj",
+      "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj",
       "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\obj\\",
+      "outputPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

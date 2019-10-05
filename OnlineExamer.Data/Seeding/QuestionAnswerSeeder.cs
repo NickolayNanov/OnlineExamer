@@ -16,7 +16,7 @@
                 {
                     new Question()
                     {
-                        ExamId = 5,
+                        ExamId = 7,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
@@ -28,7 +28,7 @@
                     },
                     new Question()
                     {
-                        ExamId = 5,
+                        ExamId = 7,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
@@ -40,7 +40,7 @@
                     },
                     new Question()
                     {
-                        ExamId = 6,
+                        ExamId = 8,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
@@ -52,7 +52,7 @@
                     },
                     new Question()
                     {
-                        ExamId = 6,
+                        ExamId = 8,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {

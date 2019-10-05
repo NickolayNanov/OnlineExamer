@@ -14,6 +14,10 @@
                 Exam[] exams =
                 {
                     new OrdinaryExam(){ ExamType = ExamType.БългарскиEзик},
+                    new OrdinaryExam(){ ExamType = ExamType.Биология},
+                    new OrdinaryExam(){ ExamType = ExamType.География},
+                    new OrdinaryExam(){ ExamType = ExamType.Психология},
+                    new FinalExam(){ ExamType = ExamType.История},
                     new FinalExam(){ ExamType = ExamType.Математика},
                 };
 
