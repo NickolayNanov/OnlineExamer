@@ -3,15 +3,19 @@
     @model IEnumerable<OnlineExamer.Models.Exams.ExamViewModel>
 }
 
-<h1 class="exams-header">Всички изпити</h1>
+<h1 class="maturnik-header">Всички изпити</h1>
 
 <div class="container">
     <div class="row">
-            @foreach (var exam in this.Model)
-            {
-                <button class="container col-md-5 mr-1 mb-4 card card-button">
-                    @exam.ExamType
-                </button>
-            }
+        @foreach (var exam in this.Model)
+        {
+            <a asp-controller="Exams"
+               asp-action="LoadingExam"
+               asp-route-examType="@exam.ExamType"
+               asp-route-yearofcreation="@exam.YearOfCreation"
+               class="btn container col-md-5 mr-1 mb-2 card-button exam-button">
+                @exam.ExamType
+            </a>
+        }
     </div>
 </div>

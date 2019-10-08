@@ -1,13 +1,16 @@
-﻿using OnlineExamer.Models.Exams;
-using System.Collections;
-using System.Collections.Generic;
-
-namespace OnlineExamer.Services.Contracts
+﻿namespace OnlineExamer.Services.Contracts
 {
+    using System.Collections.Generic;
+
+    using OnlineExamer.Models.Exams;
     public interface IExamsService
     {
         IEnumerable<ExamViewModel> AllExams();
 
         IEnumerable<ExamViewModel> MyExams();
+
+        IEnumerable<ExamViewModel> GetExamsByType(string examType);
+
+        FinalExamQuestions GetExamByYear(int year);
     }
 }

@@ -3,28 +3,30 @@
     using System.ComponentModel.DataAnnotations;
 
     using OnlineExamer.Common;
+    using OnlineExamer.Models.Attributes.ValidationAttributes;
 
+    [RegisterValidation]
     public class RegisterModel
     {
-        [Required(/*ErrorMessage = GlobalConstants.RequiredEmailMessage*/)]
-        [EmailAddress]
+        [Required(ErrorMessage = GlobalConstants.RequiredEmailMessage)]
+        [EmailAddress(ErrorMessage = GlobalConstants.InvalidEmailMessage)]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Е-Поща")]
         public string Email { get; set; }
 
 
-        [Required(/*ErrorMessage = GlobalConstants.RequiredFullNameMessage*/)]
+        [Required(ErrorMessage = GlobalConstants.RequiredFullNameMessage)]
         [MinLength(3)]
         [DataType(DataType.Text)]
         [Display(Name = "Пълно име")]
         public string FullName { get; set; }
 
-        [Required(/*ErrorMessage = GlobalConstants.RequiredPasswordMessage*/)]
+        [Required(ErrorMessage = GlobalConstants.RequiredPasswordMessage)]
         [DataType(DataType.Password)]
         [Display(Name = "Парола")]
         public string Password { get; set; }
 
-        [Required(/*ErrorMessage = GlobalConstants.RequiredConfirmPasswordNameMessage*/)]
+        [Required(ErrorMessage = GlobalConstants.RequiredConfirmPasswordNameMessage)]
         [DataType(DataType.Password)]
         [Display(Name = "Потвърдете парола")]
         [Compare(nameof(Password), ErrorMessage = GlobalConstants.PasswordsDoesNotmMatchMessage)]

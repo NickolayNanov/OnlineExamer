@@ -25,7 +25,6 @@
       "OnlineExamer/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.UI": "3.0.0",
-          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.4",
           "Microsoft.EntityFrameworkCore.Proxies": "3.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "3.0.0",
@@ -709,14 +708,6 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.4": {
-        "dependencies": {
-          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "2.9.4",
-          "Microsoft.CodeQuality.Analyzers": "2.9.4",
-          "Microsoft.NetCore.Analyzers": "2.9.4",
-          "Microsoft.NetFramework.Analyzers": "2.9.4"
-        }
-      },
       "Microsoft.CodeAnalysis.Razor/3.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "3.0.0",
@@ -733,7 +724,6 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.4": {},
       "Microsoft.CodeAnalysis.Workspaces.Common/3.3.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Common": "3.3.0",
@@ -790,7 +780,6 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Workspaces.dll": {}
         }
       },
-      "Microsoft.CodeQuality.Analyzers/2.9.4": {},
       "Microsoft.CSharp/4.6.0": {},
       "Microsoft.Data.SqlClient/1.0.19249.1": {
         "dependencies": {
@@ -1039,10 +1028,8 @@
           "System.Buffers": "4.5.0"
         }
       },
-      "Microsoft.NetCore.Analyzers/2.9.4": {},
       "Microsoft.NETCore.Platforms/2.1.2": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.NetFramework.Analyzers/2.9.4": {},
       "Microsoft.VisualStudio.Web.CodeGeneration/3.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.0.0",
@@ -2333,7 +2320,8 @@
       },
       "OnlineExamer.Models/1.0.0": {
         "dependencies": {
-          "OnlineExamer.Common": "1.0.0"
+          "OnlineExamer.Common": "1.0.0",
+          "OnlineExamer.Data.Domain": "1.0.0"
         },
         "runtime": {
           "OnlineExamer.Models.dll": {}
@@ -4252,13 +4240,6 @@
       "path": "microsoft.codeanalysis.csharp.workspaces/3.3.0",
       "hashPath": "microsoft.codeanalysis.csharp.workspaces.3.3.0.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Hq8ubc3mgNElouL7+nYqUfrgtH0s5F8UUdicBnjr72DSPKC/bQMU8lpySQ3Hog7JU7SyblFfpJR3VMgNFTzcww==",
-      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.4",
-      "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.9.4.nupkg.sha512"
-    },
     "Microsoft.CodeAnalysis.Razor/3.0.0": {
       "type": "package",
       "serviceable": true,
@@ -4266,26 +4247,12 @@
       "path": "microsoft.codeanalysis.razor/3.0.0",
       "hashPath": "microsoft.codeanalysis.razor.3.0.0.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-vKZIF7bNEOwaHvS163bdmq9zcpcN4ve2hXEacoeeeGGYClo8/YqM1iMYnsTdWtcXZj7VT9SvwhkIapjkjGM3OQ==",
-      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.4",
-      "hashPath": "microsoft.codeanalysis.versioncheckanalyzer.2.9.4.nupkg.sha512"
-    },
     "Microsoft.CodeAnalysis.Workspaces.Common/3.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-XqnerOQKZkDFGPqg+G1xwadwVfvEx+NJ7OLK66C4kg5zr7ITM5vIigJl6z/avMVutYwLH97DpHvyKru5O1gfmw==",
       "path": "microsoft.codeanalysis.workspaces.common/3.3.0",
       "hashPath": "microsoft.codeanalysis.workspaces.common.3.3.0.nupkg.sha512"
-    },
-    "Microsoft.CodeQuality.Analyzers/2.9.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+uoxsrXJ27SYXjGcXTGHwLqjC3pXe6NEDUUGv1uCWtgl7kLMHmqqPA/3zAy/H2OhU/Zq9XrYEABYXNiLUqLjMA==",
-      "path": "microsoft.codequality.analyzers/2.9.4",
-      "hashPath": "microsoft.codequality.analyzers.2.9.4.nupkg.sha512"
     },
     "Microsoft.CSharp/4.6.0": {
       "type": "package",
@@ -4504,13 +4471,6 @@
       "path": "microsoft.net.http.headers/2.2.0",
       "hashPath": "microsoft.net.http.headers.2.2.0.nupkg.sha512"
     },
-    "Microsoft.NetCore.Analyzers/2.9.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-WF0/qmG4cgMA7bl+82OfAW+DH7Qo3Np72ocK8Qr8eTyg5ZPEPonDLL0doZz29o2DF0bUht5t84lDccy+vIhXxQ==",
-      "path": "microsoft.netcore.analyzers/2.9.4",
-      "hashPath": "microsoft.netcore.analyzers.2.9.4.nupkg.sha512"
-    },
     "Microsoft.NETCore.Platforms/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -4524,13 +4484,6 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
-    },
-    "Microsoft.NetFramework.Analyzers/2.9.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xH1wQgNCIMmDWn1Y0ppu0hLqD+xexU4sygsLMIqpro9S7g+l1fBiDKuIq5dEIUmKetseyj/DLXn/ymfF5CKgBQ==",
-      "path": "microsoft.netframework.analyzers/2.9.4",
-      "hashPath": "microsoft.netframework.analyzers.2.9.4.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/3.0.0": {
       "type": "package",

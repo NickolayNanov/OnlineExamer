@@ -11,5 +11,7 @@
         public virtual Exam Exam { get; set; }
 
         public double Grade { get; set; }
+
+        public bool HasBeenStarted { get; set; }
     }
 }

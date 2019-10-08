@@ -28,6 +28,10 @@ namespace OnlineExamer.Data
         {
             this.Context.Set<TEntity>().Add(entity);
         }
+        public TEntity FindBy(Expression<Func<TEntity, bool>> expression = null)
+        {
+            return this.Data.FirstOrDefault(expression);
+        }
 
         public IQueryable<TEntity> All(Expression<Func<TEntity, bool>> expression = null)
         {

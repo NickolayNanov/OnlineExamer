@@ -10,6 +10,8 @@
 
         string ExamStartingMessage { get; }
 
+        int YearOfCreation { get; }
+
         DateTime? StartedAt { get; }
 
         DateTime? FinishedAt { get; }
@@ -20,6 +22,8 @@
 
         void Finish();
 
-        ICollection<UserExam> ExamUsers { get; set; }
+        ICollection<UserExam> ExamUsers { get; }
+
+        ICollection<Question> Questions { get; }
     }
 }

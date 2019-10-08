@@ -16,7 +16,7 @@
                 {
                     new Question()
                     {
-                        ExamId = 7,
+                        ExamId = context.Exams.FirstOrDefault().Id,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
@@ -28,7 +28,7 @@
                     },
                     new Question()
                     {
-                        ExamId = 7,
+                        ExamId = context.Exams.FirstOrDefault().Id,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
@@ -40,7 +40,7 @@
                     },
                     new Question()
                     {
-                        ExamId = 8,
+                        ExamId = context.Exams.FirstOrDefault().Id,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
@@ -52,7 +52,7 @@
                     },
                     new Question()
                     {
-                        ExamId = 8,
+                        ExamId = context.Exams.FirstOrDefault().Id,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {

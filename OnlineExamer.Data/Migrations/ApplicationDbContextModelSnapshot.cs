@@ -268,14 +268,14 @@ namespace OnlineExamer.Data.Migrations
                     b.Property<DateTime?>("FinishedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("HasBeenStarted")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("StartedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("YearOfCreation")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -294,6 +294,12 @@ namespace OnlineExamer.Data.Migrations
                         .HasColumnType("nvarchar(max)")
                         .IsUnicode(true);
 
+                    b.Property<int>("CorrectAnswerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CorrectAnswerId1")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
@@ -303,7 +309,12 @@ namespace OnlineExamer.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsOpenAnswer")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CorrectAnswerId1");
 
                     b.HasIndex("ExamId");
 
@@ -343,6 +354,9 @@ namespace OnlineExamer.Data.Migrations
 
                     b.Property<double>("Grade")
                         .HasColumnType("float");
+
+                    b.Property<bool>("HasBeenStarted")
+                        .HasColumnType("bit");
 
                     b.HasKey("ExamId", "UserId");
 
@@ -413,6 +427,10 @@ namespace OnlineExamer.Data.Migrations
 
             modelBuilder.Entity("OnlineExamer.Domain.Question", b =>
                 {
+                    b.HasOne("OnlineExamer.Domain.Answer", "CorrectAnswer")
+                        .WithMany()
+                        .HasForeignKey("CorrectAnswerId1");
+
                     b.HasOne("OnlineExamer.Domain.Exam", "Exam")
                         .WithMany("Questions")
                         .HasForeignKey("ExamId")

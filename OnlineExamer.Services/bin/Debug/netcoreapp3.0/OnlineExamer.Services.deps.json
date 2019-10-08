@@ -541,7 +541,8 @@
       },
       "OnlineExamer.Models/1.0.0": {
         "dependencies": {
-          "OnlineExamer.Common": "1.0.0"
+          "OnlineExamer.Common": "1.0.0",
+          "OnlineExamer.Data.Domain": "1.0.0"
         },
         "runtime": {
           "OnlineExamer.Models.dll": {}

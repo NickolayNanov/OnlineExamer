@@ -13,7 +13,11 @@
         {
 
         }
-        
+
+        public ApplicationDbContext()
+        {
+
+        }       
 
         public DbSet<Exam> Exams { get; set; }
 

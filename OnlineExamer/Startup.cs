@@ -13,6 +13,7 @@ namespace OnlineExamer
     using OnlineExamer.Data.Common.Repositories;
     using OnlineExamer.Data.Seeding;
     using OnlineExamer.Domain;
+    using OnlineExamer.Domain.Contracts;
     using OnlineExamer.Services;
     using OnlineExamer.Services.Contracts;
 

@@ -16,6 +16,11 @@
         public int ExamId { get; set; }
         public virtual Exam Exam { get; set; }
 
+        public bool IsOpenAnswer { get; set; }
+
+        public int CorrectAnswerId { get; set; }
+        public virtual Answer CorrectAnswer { get; set; }
+
         public virtual ICollection<Answer> Answers { get; set; }
     }
 }

@@ -9,3 +9,7 @@ D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Models\obj\Debug\netcoreap
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Models\obj\Debug\netcoreapp3.0\OnlineExamer.Models.csproj.CopyComplete
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Models\obj\Debug\netcoreapp3.0\OnlineExamer.Models.dll
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Models\obj\Debug\netcoreapp3.0\OnlineExamer.Models.pdb
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Models\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Models\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.dll
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Models\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.pdb
+D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Models\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.pdb

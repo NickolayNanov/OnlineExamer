@@ -17,13 +17,13 @@
 
         public virtual ExamType ExamType { get; set; }
 
-        public bool HasBeenStarted { get; set; }
-
         public DateTime? StartedAt { get; private set; }
 
         public DateTime? FinishedAt { get; private set; }
 
         public virtual string ExamStartingMessage { get; }
+
+        public int YearOfCreation { get; set; }
 
         public virtual ICollection<UserExam> ExamUsers { get; set; }
 
@@ -31,19 +31,11 @@
 
         public void Finish()
         {
-            if (this.HasBeenStarted)
-            {
-                this.FinishedAt = DateTime.UtcNow;
-            }
-            else
-            {
-                throw new InvalidOperationException("You need to start an exam first");
-            }
-        } 
+            this.FinishedAt = DateTime.UtcNow;
+        }
 
         public void Start()
         {
-            this.HasBeenStarted = true;
             this.FinishedAt = DateTime.UtcNow;
         }
 

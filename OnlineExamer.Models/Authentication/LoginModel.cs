@@ -3,7 +3,9 @@
     using System.ComponentModel.DataAnnotations;
 
     using OnlineExamer.Common;
+    using OnlineExamer.Models.Attributes.ValidationAttributes;
 
+    [LoginValidation]
     public class LoginModel
     {
         [Required(ErrorMessage = GlobalConstants.RequiredEmailMessage)]

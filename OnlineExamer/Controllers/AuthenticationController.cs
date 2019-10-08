@@ -30,10 +30,25 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginModel loginModel)
         {
-            await this.authenticationService.Login(loginModel);
-            return this.Redirect("/");
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+            AuthenticationResult result = await this.authenticationService.Login(loginModel);
+
+            if (result.Succeeded)
+            {
+                return this.Redirect("/");
+            }
+            else
+            {
+                this.ViewData["Errors"] = result.Errors;
+                return this.View(loginModel);
+            }
         }
 
         [HttpGet]
@@ -44,14 +59,30 @@
                 return this.Redirect("/");
             }
 
-            return View();
+            return View();  
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterModel registerModel)
         {
-            await this.authenticationService.Register(registerModel).ConfigureAwait(true);
-            return this.Redirect("/Authentication/Login");
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+            AuthenticationResult result = await this.authenticationService.Register(registerModel);
+
+            if (result.Succeeded)
+            {
+                return this.Redirect("/Authentication/Login");
+            }
+            else
+            {
+
+                this.ViewData["Errors"] = result.Errors;
+                return this.View(registerModel);
+            }
         }
 
         [HttpGet]

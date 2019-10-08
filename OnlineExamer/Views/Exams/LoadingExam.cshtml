@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "MyExams";
+    @model IEnumerable<OnlineExamer.Models.Exams.ExamViewModel>
+}
+
+<h1 class="text-center" >Всички изпити от тип @Model.FirstOrDefault()?.ExamType</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var exam in this.Model)
+        {
+            <a asp-controller="Exams"
+               asp-action="SolveExam"
+               asp-route-year="@exam.YearOfCreation"
+               class="btn container col-md-5 mr-1 card card-button exam-button">
+                @exam.YearOfCreation
+            </a>
+        }
+    </div>
+</div>

@@ -2,10 +2,11 @@
 {
     public static class GlobalConstants
     {
-        public const string RequiredEmailMessage = "The Email field is required!";
-        public const string RequiredFullNameMessage = "The Full Name field is required!";
-        public const string RequiredPasswordMessage = "The Password field is required!";
-        public const string RequiredConfirmPasswordNameMessage = "The Confirm Password field is required!";
-        public const string PasswordsDoesNotmMatchMessage = "Passwords don't match!";
+        public const string RequiredEmailMessage = "Полето Е-Поща е задължително!";
+        public const string InvalidEmailMessage = "Невалидна Е-Поща!";
+        public const string RequiredFullNameMessage = "Полето Пърлно име е задължително!";
+        public const string RequiredPasswordMessage = "Полето Парола е задължително!";
+        public const string RequiredConfirmPasswordNameMessage = "Полето Потвърдете Парола е задължително!";
+        public const string PasswordsDoesNotmMatchMessage = "Паролите не съвпадат!";
     }
 }

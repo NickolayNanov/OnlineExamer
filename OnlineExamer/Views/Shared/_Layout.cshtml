@@ -36,7 +36,7 @@
                     <a asp-controller="Home"
                        asp-action="About">
                         <i class="fas fa-briefcase"></i>
-                        За нас
+                        За създателя
                     </a>
 
                     @if (this.User.Identity.IsAuthenticated)
@@ -58,13 +58,6 @@
                             </li>
                         </ul>
                     }
-                </li>
-                <li>
-                    <a asp-controller="Home"
-                       asp-action="FAQ">
-                        <i class="fas fa-question"></i>
-                        Често задавани въпроси
-                    </a>
                 </li>
                 <li>
                     <a asp-controller="SchoolSubjects"

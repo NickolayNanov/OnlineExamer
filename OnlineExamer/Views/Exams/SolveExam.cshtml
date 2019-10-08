@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "SolveExam";
+    @model OnlineExamer.Models.Exams.FinalExamQuestions
+    int counter = 1;
+}
+
+<h1 class="text-center mb-3">@Model.StartingMessage по @Model.ExamType</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @foreach (var question in Model.Questions.ToList())
+            {
+                <span>@(counter++). @(question.Content)</span>
+
+                if (!question.IsOpenAnswer)
+                {
+                    <div>
+                        <ul>
+                            @foreach (var answer in question.Answers)
+                            {
+                                <li>
+                                    <label for="defaultRadio" class="si si-radio">
+                                        <input type="radio" id="defaultRadio" name="radioGroup" />
+                                        <span class="si-label">@answer.Contnent</span>
+                                    </label>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+             }
+        </div>
+    </div>
+</div>
+
+
+
+
+

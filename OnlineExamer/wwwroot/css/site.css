@@ -3,6 +3,7 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -68,86 +69,86 @@ span {
     transition: all 0.3s;
 }
 
-#sidebar.active {
-    min-width: 80px;
-    max-width: 80px;
-    text-align: center;
-}
+    #sidebar.active {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+    }
 
-#sidebar.active .sidebar-header h3,
-#sidebar.active .CTAs {
-    display: none;
-}
+        #sidebar.active .sidebar-header h3,
+        #sidebar.active .CTAs {
+            display: none;
+        }
 
-#sidebar.active .sidebar-header strong {
-    display: block;
-}
+        #sidebar.active .sidebar-header strong {
+            display: block;
+        }
 
-#sidebar ul li a {
-    text-align: left;
-}
+    #sidebar ul li a {
+        text-align: left;
+    }
 
-#sidebar.active ul li a {
-    padding: 20px 10px;
-    text-align: center;
-    font-size: 0.85em;
-}
+    #sidebar.active ul li a {
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 0.85em;
+    }
 
-#sidebar.active ul li a i {
-    margin-right: 0;
-    display: block;
-    font-size: 1.8em;
-    margin-bottom: 5px;
-}
+        #sidebar.active ul li a i {
+            margin-right: 0;
+            display: block;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
 
-#sidebar.active ul ul a {
-    padding: 10px !important;
-}
+    #sidebar.active ul ul a {
+        padding: 10px !important;
+    }
 
-#sidebar.active .dropdown-toggle::after {
-    top: auto;
-    bottom: 10px;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
-}
+    #sidebar.active .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
 
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #6d7fcc;
-}
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #6d7fcc;
+    }
 
-#sidebar .sidebar-header strong {
-    display: none;
-    font-size: 1.8em;
-}
+        #sidebar .sidebar-header strong {
+            display: none;
+            font-size: 1.8em;
+        }
 
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+    }
 
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
 
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
-}
+        #sidebar ul li a:hover {
+            color: #7386D5;
+            background: #fff;
+        }
 
-#sidebar ul li a i {
-    margin-right: 10px;
-}
+        #sidebar ul li a i {
+            margin-right: 10px;
+        }
 
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-}
+    #sidebar ul li.active > a,
+    a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+    }
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -171,13 +172,13 @@ ul.CTAs {
     padding: 20px;
 }
 
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
+    ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
 
 a.download {
     background: #fff;
@@ -212,6 +213,7 @@ a.article:hover {
         text-align: center;
         margin-left: -80px !important;
     }
+
     .dropdown-toggle::after {
         top: auto;
         bottom: 10px;
@@ -220,35 +222,45 @@ a.article:hover {
         -ms-transform: translateX(50%);
         transform: translateX(50%);
     }
+
     #sidebar.active {
         margin-left: 0 !important;
     }
+
     #sidebar .sidebar-header h3,
     #sidebar .CTAs {
         display: none;
     }
+
     #sidebar .sidebar-header strong {
         display: block;
     }
+
     #sidebar ul li a {
         padding: 20px 10px;
     }
-    #sidebar ul li a span {
-        font-size: 0.85em;
-    }
-    #sidebar ul li a i {
-        margin-right: 0;
-        display: block;
-    }
+
+        #sidebar ul li a span {
+            font-size: 0.85em;
+        }
+
+        #sidebar ul li a i {
+            margin-right: 0;
+            display: block;
+        }
+
     #sidebar ul ul a {
         padding: 10px !important;
-    }   
+    }
+
     #sidebar ul li a i {
         font-size: 1.3em;
     }
+
     #sidebar {
         margin-left: 0;
     }
+
     #sidebarCollapse span {
         display: none;
     }
@@ -259,8 +271,14 @@ a.article:hover {
     background: #117a8b;
 }
 
-.exams-header {
+.maturnik-header {
     padding-left: 37%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.maturnik-header-about {
+    padding-left: 5rem;
+    padding-right: 5rem;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -270,6 +288,170 @@ a.article:hover {
     margin-top: 20px;
 }
 
-.card-button{
+.card-button {
     border-radius: 7px;
+    background-color: #7386D5;
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+}
+
+.card-button:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+/* Si starts here */
+.si {
+    --color-label: #9aa6bf;
+    --color-default: #dee5f2;
+    --color-active: #0069ff;
+    --rotate-default: 180deg;
+    --rotate-active: 40deg;
+    --border-size-checkmark: 2px;
+    --border-size-box: 1px;
+    --input-size: 20px;
+    --guter: 15px;
+}
+
+    /* basic reset */
+    .si,
+    .si *,
+    .si *::before,
+    .si *::after {
+        box-sizing: border-box;
+    }
+
+/* label */
+.si {
+    cursor: pointer;
+    position: relative;
+}
+
+.si .si-label {
+    display: inline-block;
+    padding-left: var(--guter);
+    color: var(--color-label);
+    vertical-align: text-top;
+}
+
+.si > input {
+    opacity: 0;
+}
+
+.si > input[type="checkbox"],
+.si > input[type="radio"] {
+    clip-path: polygon(0 0);
+}
+
+.si .si-label::before,
+.si .si-label::after {
+    transition: all 0.2s ease-in-out;
+}
+
+/* an element for both checkbox and radio */
+.si .si-label::before {
+    content: '';
+    display: block;
+    width: var(--input-size);
+    height: var(--input-size);
+    border: var(--border-size-box) solid var(--color-default);
+    position: absolute;
+    top: -3px;
+    left: 0;
+    transform: rotate(0deg) scale(1);
+}
+
+/* feedback when the user interacts with an element */
+.si .si-label:hover::before {
+    border-color: var(--color-active);
+}
+
+.si.si-radio .si-label::before,
+.si.si-radio .si-label::after {
+    border-radius: 100%;
+    top: -2px;
+}
+
+/* radio bullet circle */
+.si.si-radio .si-label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 0;
+    top: 100%;
+    left: 4px;
+}
+
+.si.si-radio > input:checked + .si-label::after {
+    background-color: #fff;
+    height: 12px;
+    top: 2px;
+}
+
+.si.si-radio > input:checked + .si-label::before {
+    background-color: var(--color-active);
+}
+
+
+#about-header {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* contacts */
+
+.rolldown-list {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+    .rolldown-list li {
+        padding: 1em;
+        margin-bottom: .125em;
+        display: block;
+        list-style: none;
+        text-transform: uppercase;
+    }
+
+    .rolldown-list li {
+        visibility: hidden;
+        animation: rolldown .7s 1;
+        transform-origin: 50% 0;
+        animation-fill-mode: forwards;
+    }
+
+        .rolldown-list li:nth-child(2n) {
+            background-color: #7386D5;
+            color: white;
+        }
+
+        .rolldown-list li:nth-child(2n+1) {
+            background-color: rgb(129, 148, 241);           
+            color: white;
+        }
+#myList {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+}
+
+@keyframes rolldown {
+    0% {
+        visibility: visible;
+        transform: rotateX(180deg) perspective(500px);
+    }
+
+    70% {
+        visibility: visible;
+        transform: rotateX(-20deg);
+    }
+
+    100% {
+        visibility: visible;
+        transform: rotateX(0deg);
+    }
 }

@@ -24,5 +24,19 @@
             var exams = this.examsService.AllExams();
             return this.View(exams);
         }
+
+        [HttpGet]
+        public IActionResult LoadingExam(string examType)
+        {
+            var exams = this.examsService.GetExamsByType(examType);
+            return this.View(exams);
+        }
+
+        [HttpGet]
+        public IActionResult SolveExam(int year)
+        {
+            var exam = this.examsService.GetExamByYear(year);
+            return this.View(exam);
+        }
     }
 }

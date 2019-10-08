@@ -1,6 +1,7 @@
 ﻿namespace OnlineExamer.Services
 {
     using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Identity;
@@ -22,29 +23,38 @@
             this.signInManager = signInManager;
         }
 
-        public async Task Login(LoginModel loginModel)
+        public async Task<AuthenticationResult> Login(LoginModel loginModel)
         {
-            if(loginModel == null)
+            if (loginModel == null)
             {
                 throw new ArgumentNullException();
             }
 
+            AuthenticationResult authenticationResult = new AuthenticationResult();
             ApplicationUser applicationUser = await this.userManager.FindByEmailAsync(loginModel.Email);
 
-            SignInResult result = await this.signInManager
-                .PasswordSignInAsync(
-                    applicationUser, 
-                    loginModel.Password, 
-                    false,
-                    false);
-
-            if (result.Succeeded)
+            if (applicationUser == null)
             {
-                await this.signInManager.SignInAsync(applicationUser, false);
+                authenticationResult.Errors = "Не съществува потребител с тази Е-Поща";
+                return authenticationResult;
             }
+
+            SignInResult result = await TryPsswordSignInAsync(loginModel, applicationUser);
+            if (!result.Succeeded)
+            {
+                authenticationResult.Errors = "Невалидна парола!";
+            }
+            else
+            {
+                await PrepareSuccessfullResultAsync(authenticationResult, applicationUser);
+            }
+
+            return authenticationResult;
         }
 
-        public async Task Register(RegisterModel registerModel)
+        
+
+        public async Task<AuthenticationResult> Register(RegisterModel registerModel)
         {
             if (registerModel == null)
             {
@@ -52,12 +62,40 @@
             }
 
             ApplicationUser applicationUser = new ApplicationUser(registerModel.Email, registerModel.FullName);
-            await this.userManager.CreateAsync(applicationUser, registerModel.Password);
+            IdentityResult result =  await this.userManager.CreateAsync(applicationUser, registerModel.Password);
+            AuthenticationResult authenticationResult = new AuthenticationResult();
+
+            if (!result.Succeeded)
+            {
+                authenticationResult.Errors = "Вероятно Е-пощата, която използвате е заета. Моля опитайте друга.";
+            }
+            else
+            {
+                await this.PrepareSuccessfullResultAsync(authenticationResult, applicationUser);
+            }
+
+            return authenticationResult;
         }
 
         public async Task Logout()
         {
             await this.signInManager.SignOutAsync();
+        }
+
+        private async Task PrepareSuccessfullResultAsync(AuthenticationResult authenticationResult, ApplicationUser applicationUser)
+        {
+            await this.signInManager.SignInAsync(applicationUser, true);
+            authenticationResult.Succeeded = true;
+        }
+
+        private async Task<SignInResult> TryPsswordSignInAsync(LoginModel loginModel, ApplicationUser applicationUser)
+        {
+            return await this.signInManager
+                            .PasswordSignInAsync(
+                                applicationUser,
+                                loginModel.Password,
+                                false,
+                                false);
         }
     }
 }
