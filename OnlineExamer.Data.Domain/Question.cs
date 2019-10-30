@@ -18,8 +18,7 @@
 
         public bool IsOpenAnswer { get; set; }
 
-        public int CorrectAnswerId { get; set; }
-        public virtual Answer CorrectAnswer { get; set; }
+        public int CorrectAnswer { get; set; }
 
         public virtual ICollection<Answer> Answers { get; set; }
     }

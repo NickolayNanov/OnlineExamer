@@ -10,10 +10,10 @@
         }
         public Answer(string content)
         {
-            this.Contnent = content;
+            this.Content = content;
         }
 
-        public string Contnent { get; set; }
+        public string Content { get; set; }
 
         public int QuestionId { get; set; }
         public virtual Question Question { get; set; }

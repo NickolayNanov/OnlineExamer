@@ -1,7 +1,9 @@
 ﻿namespace OnlineExamer.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using OnlineExamer.Models.Exams;
     using OnlineExamer.Services.Contracts;
+    using System.Threading.Tasks;
 
     public class ExamsController : BaseController
     {
@@ -37,6 +39,13 @@
         {
             var exam = this.examsService.GetExamByYear(year);
             return this.View(exam);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SolveExamPost(ExamQuestions exam)
+        {
+            int points = await this.examsService.SolveExam(exam, this.User.Identity.Name);
+            return this.View("ExamResult", points);
         }
     }
 }

@@ -9,3 +9,14 @@ D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netc
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.csproj.CopyComplete
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.dll
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.deps.json
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.dll
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.dll
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.csprojAssemblyReference.cache
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.AssemblyInfoInputs.cache
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.AssemblyInfo.cs
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.csproj.CopyComplete
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.dll
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Domain\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Domain.pdb

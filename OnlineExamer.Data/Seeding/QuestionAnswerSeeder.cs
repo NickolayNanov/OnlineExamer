@@ -16,55 +16,68 @@
                 {
                     new Question()
                     {
+                        CorrectAnswer = 1,
                         ExamId = context.Exams.FirstOrDefault().Id,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
-                            new Answer("Курви бол"),
-                            new Answer("Общака мадафака"),
-                            new Answer("Общака мадафака"),
-                            new Answer("Общака мадафака"),
+                            new Answer("ASDASDSADASD"),
+                            new Answer("ьяаяьаьяаяьа"),
+                            new Answer("ьяаяьаьяаяьа"),
+                            new Answer("ьяаяьаьяаяьа"),
                         }
                     },
                     new Question()
                     {
+                        CorrectAnswer = 1,
                         ExamId = context.Exams.FirstOrDefault().Id,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
-                            new Answer("Курви в мол"),
-                            new Answer("Общака кака мадафака"),
-                            new Answer("Общака кака мадафака"),
-                            new Answer("Общака кака мадафака"),
+                            new Answer("asdasdasdsad"),
+                            new Answer("ьяаяьаьяаяьа"),
+                            new Answer("ьяаяьаьяаяьа"),
+                            new Answer("ьяаяьаьяаяьа"),
                         }
                     },
                     new Question()
                     {
+                        CorrectAnswer = 1,
                         ExamId = context.Exams.FirstOrDefault().Id,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
-                            new Answer("Курви ьяаья бол"),
-                            new Answer("Курви ьяаья бол"),
-                            new Answer("Курви ьяаья бол"),
-                            new Answer("Общака ьаяьяа мадафака"),
+                            new Answer("asdasdasdasd"),
+                            new Answer("ьяаяьаьяаяьа"),
+                            new Answer("ьяаяьаьяаяьа"),
+                            new Answer("ьяаяьаьяаяьа"),
                         }
                     },
                     new Question()
                     {
+                        CorrectAnswer = 1,
                         ExamId = context.Exams.FirstOrDefault().Id,
                         Content = "asdasdasdas",
                         Answers = new HashSet<Answer>()
                         {
-                            new Answer("Курви asdasd бол"),
-                            new Answer("Общака ddasdadм адафака"),
-                            new Answer("Общака ddasdadм адафака"),
-                            new Answer("Общака ddasdadм адафака"),
+                            new Answer("asdsadasdsad"),
+                            new Answer("ьяаяьаьяаяьа"),
+                            new Answer("ьяаяьаьяаяьа"),
+                            new Answer("ьяаяьаьяаяьа"),
                         }
                     },
                 };
 
                 context.Questions.AddRange(questions);
+                context.SaveChanges();
+
+                Answer answer = context.Answers.FirstOrDefault();
+
+                foreach (var question in context.Questions)
+                {
+                    question.CorrectAnswer = 1;
+                }
+
                 context.SaveChanges();
             }
         }

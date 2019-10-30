@@ -1,41 +1,57 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "SolveExam";
     @model OnlineExamer.Models.Exams.FinalExamQuestions
     int counter = 1;
+    int questionsCount = Model.Questions.Count;
+    IEnumerable<OnlineExamer.Domain.Answer> answers = new List<OnlineExamer.Domain.Answer>();
 }
 
+@if (Model.ExamType == "БългарскиEзик")
+{
+    <h1 class="text-center mb-3">@Model.StartingMessage по Български eзик</h1>
+}
+else if (Model.ExamType == "АнглийскиEзик")
+{
+    <h1 class="text-center mb-3">@Model.StartingMessage по Английски eзик</h1>
+}
+else
+{
 <h1 class="text-center mb-3">@Model.StartingMessage по @Model.ExamType</h1>
+}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            @foreach (var question in Model.Questions.ToList())
-            {
-                <span>@(counter++). @(question.Content)</span>
-
-                if (!question.IsOpenAnswer)
+<form method="post"
+      asp-controller="Exams"
+      asp-action="SolveExamPost"
+      asp-route-YearOfCreation="@Model.YearOfCreation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                @for (int i = 0; i < questionsCount; i++)
                 {
-                    <div>
-                        <ul>
-                            @foreach (var answer in question.Answers)
+                    <span>@(counter++). @(Model.Questions[i].Content)</span>
+
+                    if (!Model.Questions[i].IsOpenAnswer)
+                    {
+                        <ul class="list-group" id="question_@(counter - 1)">
+                            @for (int j = 0; j < Model.Questions[i].Answers.Count; j++)
                             {
-                                <li>
-                                    <label for="defaultRadio" class="si si-radio">
-                                        <input type="radio" id="defaultRadio" name="radioGroup" />
-                                        <span class="si-label">@answer.Contnent</span>
-                                    </label>
+                                <li onclick="giveAnswer(@(counter - 1), @j)" class="list-group-item mb-3" id="question_@(counter - 1)_answer_@j">
+
+                                    <input asp-for="@Model.Questions[i].Answers[j].IsSelected"
+                                           type="checkbox"
+                                           id="input_@(counter - 1)_question_@j"
+                                           class="check"
+                                           style="display:none" />
+                                    <label>@Model.Questions[i].Answers[j].Content</label>
                                 </li>
                             }
                         </ul>
-                    </div>
+                    }
                 }
-             }
+                <button class="btn btn-success">
+                    Send
+                </button>
+            </div>
         </div>
     </div>
-</div>
-
-
-
-
-
+</form>

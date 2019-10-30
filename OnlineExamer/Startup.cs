@@ -11,6 +11,7 @@ namespace OnlineExamer
 
     using OnlineExamer.Data;
     using OnlineExamer.Data.Common.Repositories;
+    using OnlineExamer.Data.Repositories;
     using OnlineExamer.Data.Seeding;
     using OnlineExamer.Domain;
     using OnlineExamer.Domain.Contracts;
@@ -66,6 +67,7 @@ namespace OnlineExamer
             services.AddTransient<ISchoolSubjectsService, SchoolSubjectsService>();
             services.AddTransient<IExamsService, ExamsService>();
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddScoped<IExamRepository, ExamRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

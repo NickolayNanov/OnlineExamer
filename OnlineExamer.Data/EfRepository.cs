@@ -28,7 +28,7 @@ namespace OnlineExamer.Data
         {
             this.Context.Set<TEntity>().Add(entity);
         }
-        public TEntity FindBy(Expression<Func<TEntity, bool>> expression = null)
+        public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> expression = null)
         {
             return this.Data.FirstOrDefault(expression);
         }

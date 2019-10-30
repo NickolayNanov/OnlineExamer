@@ -1,6 +1,7 @@
 ﻿namespace OnlineExamer.Models.Exams
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class ExamQuestions
     {
@@ -11,6 +12,10 @@
 
         public virtual string StartingMessage { get; set; }
 
-        public IEnumerable<QuestionViewModel> Questions { get; set; }
+        [Required]
+        public IList<QuestionViewModel> Questions { get; set; }
+
+        [Required]
+        public IList<AnswerViewModel> Answers { get; set; }
     }
 }

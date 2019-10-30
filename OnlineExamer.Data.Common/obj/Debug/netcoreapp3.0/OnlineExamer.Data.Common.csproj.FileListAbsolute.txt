@@ -5,3 +5,10 @@ D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Data.Common\obj\Debug\netc
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Data.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Common.AssemblyInfo.cs
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Data.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Common.dll
 D:\Projects\OnlineExamer2.0\OnlineExamer\OnlineExamer.Data.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Common.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Common\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.deps.json
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Common\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.dll
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Common\bin\Debug\netcoreapp3.0\OnlineExamer.Data.Common.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Common.AssemblyInfoInputs.cache
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Common.AssemblyInfo.cs
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Common.dll
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Data.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Data.Common.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data\\OnlineExamer.Data.csproj": {}
+    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data\\OnlineExamer.Data.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj": {
+    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj",
+        "projectUniqueName": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj",
         "projectName": "OnlineExamer.Data.Common",
-        "projectPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj",
+        "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj",
         "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\obj\\",
+        "outputPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -67,14 +67,14 @@
         }
       }
     },
-    "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj": {
+    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj",
+        "projectUniqueName": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj",
         "projectName": "OnlineExamer.Data.Domain",
-        "projectPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj",
+        "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj",
         "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Domain\\obj\\",
+        "outputPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -95,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj": {
-                "projectPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj"
+              "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj": {
+                "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Common\\OnlineExamer.Data.Common.csproj"
               }
             }
           }
@@ -134,14 +134,14 @@
         }
       }
     },
-    "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data\\OnlineExamer.Data.csproj": {
+    "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data\\OnlineExamer.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data\\OnlineExamer.Data.csproj",
+        "projectUniqueName": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data\\OnlineExamer.Data.csproj",
         "projectName": "OnlineExamer.Data",
-        "projectPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data\\OnlineExamer.Data.csproj",
+        "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data\\OnlineExamer.Data.csproj",
         "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data\\obj\\",
+        "outputPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -162,8 +162,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj": {
-                "projectPath": "D:\\Projects\\OnlineExamer2.0\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj"
+              "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj": {
+                "projectPath": "D:\\OnlineExamer\\OnlineExamer\\OnlineExamer\\OnlineExamer.Data.Domain\\OnlineExamer.Data.Domain.csproj"
               }
             }
           }

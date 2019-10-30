@@ -24,6 +24,6 @@
 
         ICollection<UserExam> ExamUsers { get; }
 
-        ICollection<Question> Questions { get; }
+        IList<Question> Questions { get; }
     }
 }

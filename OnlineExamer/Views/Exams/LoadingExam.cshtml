@@ -3,7 +3,18 @@
     @model IEnumerable<OnlineExamer.Models.Exams.ExamViewModel>
 }
 
-<h1 class="text-center" >Всички изпити от тип @Model.FirstOrDefault()?.ExamType</h1>
+@if (Model.FirstOrDefault()?.ExamType == "БългарскиEзик")
+{
+    <h1 class="text-center">Всички изпити от тип Български eзик</h1>
+}
+else if (Model.FirstOrDefault()?.ExamType == "АнглийскиEзик")
+{
+    <h1 class="text-center">Всички изпити от тип Английски eзик</h1>
+}
+else
+{
+    <h1 class="text-center">Всички изпити от тип @Model.FirstOrDefault()?.ExamType</h1>
+}
 
 <div class="container">
     <div class="row">

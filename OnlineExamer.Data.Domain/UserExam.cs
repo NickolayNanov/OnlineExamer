@@ -13,5 +13,7 @@
         public double Grade { get; set; }
 
         public bool HasBeenStarted { get; set; }
+
+        public int Points { get; set; }
     }
 }

@@ -9,13 +9,37 @@
     <div class="row">
         @foreach (var exam in this.Model)
         {
-            <a asp-controller="Exams"
-               asp-action="LoadingExam"
-               asp-route-examType="@exam.ExamType"
-               asp-route-yearofcreation="@exam.YearOfCreation"
-               class="btn container col-md-5 mr-1 mb-2 card-button exam-button">
-                @exam.ExamType
-            </a>
+            if (exam.ExamType == "БългарскиEзик")
+            {
+                <a asp-controller="Exams"
+                   asp-action="LoadingExam"
+                   asp-route-examType="@exam.ExamType"
+                   asp-route-yearofcreation="@exam.YearOfCreation"
+                   class="btn container col-md-5 mr-1 mb-2 card-button exam-button">
+                    Български eзик
+                </a>
+            }
+            else if (exam.ExamType == "АнглийскиEзик")
+            {
+                <a asp-controller="Exams"
+                   asp-action="LoadingExam"
+                   asp-route-examType="@exam.ExamType"
+                   asp-route-yearofcreation="@exam.YearOfCreation"
+                   class="btn container col-md-5 mr-1 mb-2 card-button exam-button">
+                    Английски eзик
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Exams"
+                   asp-action="LoadingExam"
+                   asp-route-examType="@exam.ExamType"
+                   asp-route-yearofcreation="@exam.YearOfCreation"
+                   class="btn container col-md-5 mr-1 mb-2 card-button exam-button">
+                    @exam.ExamType
+                </a>
+            }
+
         }
     </div>
 </div>

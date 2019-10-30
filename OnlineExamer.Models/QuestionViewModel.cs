@@ -3,6 +3,7 @@
     using System.Collections.Generic;
 
     using OnlineExamer.Domain;
+    using OnlineExamer.Models.Exams;
 
     public class QuestionViewModel
     {
@@ -10,8 +11,8 @@
 
         public bool IsOpenAnswer { get; set; }
 
-        public virtual Answer CorrectAnswer { get; set; }
+        public int CorrectAnswer { get; set; }
 
-        public virtual ICollection<Answer> Answers { get; set; }
+        public virtual IList<AnswerViewModel> Answers { get; set; }
     }
 }

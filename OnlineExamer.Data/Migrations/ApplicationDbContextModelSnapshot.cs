@@ -157,7 +157,7 @@ namespace OnlineExamer.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Contnent")
+                    b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .IsUnicode(true);
@@ -294,10 +294,7 @@ namespace OnlineExamer.Data.Migrations
                         .HasColumnType("nvarchar(max)")
                         .IsUnicode(true);
 
-                    b.Property<int>("CorrectAnswerId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CorrectAnswerId1")
+                    b.Property<int>("CorrectAnswer")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedOn")
@@ -313,8 +310,6 @@ namespace OnlineExamer.Data.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CorrectAnswerId1");
 
                     b.HasIndex("ExamId");
 
@@ -357,6 +352,9 @@ namespace OnlineExamer.Data.Migrations
 
                     b.Property<bool>("HasBeenStarted")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Points")
+                        .HasColumnType("int");
 
                     b.HasKey("ExamId", "UserId");
 
@@ -427,10 +425,6 @@ namespace OnlineExamer.Data.Migrations
 
             modelBuilder.Entity("OnlineExamer.Domain.Question", b =>
                 {
-                    b.HasOne("OnlineExamer.Domain.Answer", "CorrectAnswer")
-                        .WithMany()
-                        .HasForeignKey("CorrectAnswerId1");
-
                     b.HasOne("OnlineExamer.Domain.Exam", "Exam")
                         .WithMany("Questions")
                         .HasForeignKey("ExamId")

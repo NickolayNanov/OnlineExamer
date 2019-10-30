@@ -12,7 +12,7 @@
 
         IQueryable<TEntity> AllAsNoTracking(Expression<Func<TEntity, bool>> expression = null);
 
-        TEntity FindBy(Expression<Func<TEntity, bool>> expression = null);
+        TEntity FirstOrDefault(Expression<Func<TEntity, bool>> expression = null);
 
         void Add(TEntity entity);
 

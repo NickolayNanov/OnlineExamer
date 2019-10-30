@@ -27,7 +27,7 @@ using OnlineExamer.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c67e38d8f93e72ed9754ccb2c005b47ce71beea3", @"/Views/Home/FAQ.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12fc8e7afd77bcdd267525f7f74e263ff4942ca2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6dfbb7bcc60d76efe3a901e374715a7a20d1ff74", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_FAQ : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

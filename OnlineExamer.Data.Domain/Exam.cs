@@ -12,7 +12,7 @@
         public Exam()
         {
             this.ExamUsers = new HashSet<UserExam>();
-            this.Questions = new HashSet<Question>();
+            this.Questions = new List<Question>();
         }
 
         public virtual ExamType ExamType { get; set; }
@@ -27,7 +27,7 @@
 
         public virtual ICollection<UserExam> ExamUsers { get; set; }
 
-        public virtual ICollection<Question> Questions { get; set; }
+        public virtual IList<Question> Questions { get; set; }
 
         public void Finish()
         {

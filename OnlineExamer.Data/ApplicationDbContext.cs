@@ -70,7 +70,7 @@
         private void AnswerModelSettings(ModelBuilder builder)
         {
             builder.Entity<Answer>()
-                            .Property(answer => answer.Contnent)
+                            .Property(answer => answer.Content)
                             .IsUnicode()
                             .IsRequired();
 

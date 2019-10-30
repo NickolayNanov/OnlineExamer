@@ -1,6 +1,6 @@
 ﻿namespace OnlineExamer.Data.Domain.Enums
 {
-    public enum ExamType
+    public enum SchoolSubjects
     {
         Биология = 1,
         История = 2,
