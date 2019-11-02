@@ -291,6 +291,7 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\O
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Authentication\Login.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Authentication\Register.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\AllExams.cshtml.g.cs
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\ExamResult.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\LoadingExam.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\MyExams.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\SolveExam.cshtml.g.cs
@@ -311,4 +312,3 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\O
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\OnlineExamer.csproj.CopyComplete
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\OnlineExamer.dll
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\OnlineExamer.pdb
-D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\ExamResult.cshtml.g.cs

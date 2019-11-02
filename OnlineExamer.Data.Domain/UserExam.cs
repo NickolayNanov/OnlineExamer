@@ -1,6 +1,9 @@
-﻿namespace OnlineExamer.Domain
+﻿using System;
+using OnlineExamer.Data.Common.EntityInfrastructure;
+
+namespace OnlineExamer.Domain
 {
-    public class UserExam
+    public class UserExam : IDeletable
     {
         public string UserId { get; set; }
 
@@ -15,5 +18,9 @@
         public bool HasBeenStarted { get; set; }
 
         public int Points { get; set; }
+
+        public bool IsDeleted { get ; set; }
+
+        public DateTime? DeletedOn { get; set; }
     }
 }

@@ -66,6 +66,8 @@ namespace OnlineExamer
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<ISchoolSubjectsService, SchoolSubjectsService>();
             services.AddTransient<IExamsService, ExamsService>();
+            services.AddTransient<IUserExamsService, UserExamsService>();
+
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<IExamRepository, ExamRepository>();
         }

@@ -14,5 +14,7 @@
         FinalExamQuestions GetExamByYear(int year);
 
         Task<int> SolveExam(ExamQuestions examQuestions, string name);
+
+        IEnumerable<ExamViewModel> GetExamsForUser(string name);
     }
 }

@@ -159,5 +159,10 @@
 
             return points;
         }
+
+        public IEnumerable<ExamViewModel> GetExamsForUser(string name)
+        {
+            return null;
+        }
     }
 }

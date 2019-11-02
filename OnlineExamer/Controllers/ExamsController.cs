@@ -3,21 +3,26 @@
     using Microsoft.AspNetCore.Mvc;
     using OnlineExamer.Models.Exams;
     using OnlineExamer.Services.Contracts;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     public class ExamsController : BaseController
     {
         private readonly IExamsService examsService;
+        private readonly IUserExamsService userExamsService;
 
-        public ExamsController(IExamsService examsService)
+        public ExamsController(IExamsService examsService,
+                                IUserExamsService userExamsService)
         {
             this.examsService = examsService;
+            this.userExamsService = userExamsService;
         }
 
         [HttpGet]
-        public IActionResult MyExams()
+        public async Task<IActionResult> MyExams()
         {
-            return this.View();
+            var exams = await this.userExamsService.GetExamsForUser(this.User.Identity.Name);
+            return this.View(exams);
         }
 
         [HttpGet]
