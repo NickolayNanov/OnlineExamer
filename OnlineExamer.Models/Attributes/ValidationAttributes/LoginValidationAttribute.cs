@@ -3,8 +3,11 @@
     using System.ComponentModel.DataAnnotations;
 
     using OnlineExamer.Models.Authentication;
+
     public class LoginValidationAttribute : ValidationAttribute
     {
+        private const string InvalidInputDataErrorMessage = "Невалидни входни данни!";
+
         public LoginValidationAttribute()
         {
         }
@@ -18,7 +21,7 @@
                 !model.Email.Contains("@") ||
                 model?.Password == null)
             {
-                return new ValidationResult("Невалидни входни данни!");
+                return new ValidationResult(InvalidInputDataErrorMessage);
             }
 
             return ValidationResult.Success;

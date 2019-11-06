@@ -2,7 +2,6 @@
 {
     using System.Collections.Generic;
 
-    using OnlineExamer.Domain;
     using OnlineExamer.Models.Exams;
 
     public class QuestionViewModel

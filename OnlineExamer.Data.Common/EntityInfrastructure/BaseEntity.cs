@@ -10,7 +10,9 @@
         }
 
         public TKey Id { get; set; }
+
         public bool IsDeleted { get; set; }
+
         public DateTime? DeletedOn { get; set; }
     }
 }

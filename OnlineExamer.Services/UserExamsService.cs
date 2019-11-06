@@ -3,7 +3,9 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+
     using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
 
     using OnlineExamer.Data.Common.Repositories;
     using OnlineExamer.Domain;
@@ -12,8 +14,8 @@
 
     public class UserExamsService : IUserExamsService
     {
-        private readonly IRepository<UserExam> repository;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly IRepository<UserExam> repository;
 
         public UserExamsService(IRepository<UserExam> repository,
                                 UserManager<ApplicationUser> userManager)
@@ -22,27 +24,65 @@
             this.userManager = userManager;
         }
 
-        public async Task<IEnumerable<MyExamViewModel>> GetExamsForUser(string user)
+        public async Task<IEnumerable<MyExamViewModel>> GetExamsForUser(string username)
         {
-            var userFromDb = await this.userManager.FindByNameAsync(user);
+            var user = await this.userManager.FindByNameAsync(username);
 
-            IEnumerable<MyExamViewModel> exams = this.repository.AllAsNoTracking(x => x.UserId == userFromDb.Id)
-                                                                .Select(x => x.Exam)
-                                                                .Select(x => new MyExamViewModel()
-                                                                {
-                                                                      Year = x.YearOfCreation
-                                                                })
-                                                                .AsEnumerable();
+            var exams = this.repository
+                                .AllAsNoTracking(ux => ux.UserId == user.Id)
+                                .Select(ux => ux.Exam)
+                                .ToList();
 
-            var userExams = this.repository.AllAsNoTracking(x => x.UserId == userFromDb.Id).ToList();
-            
-            foreach (var exam in exams)
+            var userExams = this.repository
+                                .AllAsNoTracking(ux => ux.UserId == user.Id)
+                                .Include(x => x.Exam)
+                                .Include(x => x.User)
+                                .ToList();
+
+            var userExamViewModels = userExams.Select(x =>
+                                                    new MyExamViewModel()
+                                                    {
+                                                        Year = x.Exam.YearOfCreation,
+                                                        Points = x.Points,
+                                                        ExamType = x.Exam.ExamType.ToString()
+                                                    });
+
+            return userExamViewModels;
+        }
+
+        public async Task<IEnumerable<ExamViewModel>> GetExamTypesForUser(string username)
+        {
+            var user = await this.userManager.FindByNameAsync(username);
+
+            var exams = this.repository
+                                .AllAsNoTracking(ux => ux.UserId == user.Id)
+                                .Select(ux => ux.Exam)
+                                .ToList();
+
+            var examViewModels = exams.Select(x => new ExamViewModel()
             {
-                var examm = userExams.FirstOrDefault(e => e.UserId == userFromDb.Id && e.Exam.YearOfCreation == exam.Year);
-                exam.Points = examm.Points;
-            }
+                ExamType = x.ExamType.ToString(),
+                YearOfCreation = x.YearOfCreation
+            }).ToList();
 
-            return null;
+            return examViewModels;
+        }
+
+        public async Task<IEnumerable<MyExamViewModel>> GetSatExamsByUser(string username)
+        {
+            var user = await this.userManager.FindByNameAsync(username);
+            var userExams = this.repository.AllAsNoTracking(x => x.UserId == user.Id);
+
+            var myExams = userExams.Select(x => new MyExamViewModel()
+            {
+                ExamType = x.Exam.ExamType.ToString(),
+                Year = x.Exam.YearOfCreation,
+                Points = x.Points
+            }).ToList()
+              .OrderBy(x => x.ExamType)
+              .AsEnumerable();
+
+            return myExams;
         }
     }
 }

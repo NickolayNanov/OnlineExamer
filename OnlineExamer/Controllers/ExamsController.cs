@@ -1,10 +1,12 @@
 ﻿namespace OnlineExamer.Controllers
 {
+
+    using System.Threading.Tasks;
+
     using Microsoft.AspNetCore.Mvc;
+
     using OnlineExamer.Models.Exams;
     using OnlineExamer.Services.Contracts;
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
 
     public class ExamsController : BaseController
     {
@@ -16,6 +18,18 @@
         {
             this.examsService = examsService;
             this.userExamsService = userExamsService;
+        }
+
+        public async Task<IActionResult> GetSatExams()
+        {
+            var exams = await this.userExamsService.GetSatExamsByUser(this.User.Identity.Name);
+            return this.View(exams);
+        }
+
+        public async Task<IActionResult> MyExamTypes()
+        {
+            var exams = await this.userExamsService.GetExamTypesForUser(this.User.Identity.Name);
+            return this.View(exams);
         }
 
         [HttpGet]

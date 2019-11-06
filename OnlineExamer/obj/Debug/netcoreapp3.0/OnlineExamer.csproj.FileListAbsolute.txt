@@ -293,7 +293,6 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\R
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\AllExams.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\ExamResult.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\LoadingExam.cshtml.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\MyExams.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\SolveExam.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Home\About.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Home\Contacts.cshtml.g.cs
@@ -312,3 +311,4 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\O
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\OnlineExamer.csproj.CopyComplete
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\OnlineExamer.dll
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\OnlineExamer.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\GetSatExams.cshtml.g.cs

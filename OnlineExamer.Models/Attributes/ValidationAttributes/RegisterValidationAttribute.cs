@@ -7,6 +7,8 @@
 
     public class RegisterValidationAttribute : ValidationAttribute
     {
+        private const string InvalidInputErrorMessage = "Invalid input!";
+
         public RegisterValidationAttribute()
         {
         }
@@ -21,7 +23,7 @@
                 model.Password.Length <= 0 || 
                 model.Password != model.ConfirmPassword)
             {
-                return new ValidationResult("Invalid input!");
+                return new ValidationResult(InvalidInputErrorMessage);
             }
 
             return ValidationResult.Success;

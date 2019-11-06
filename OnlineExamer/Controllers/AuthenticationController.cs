@@ -38,7 +38,7 @@
                 return this.View();
             }
 
-            AuthenticationResult result = await this.authenticationService.Login(loginModel);
+            var result = await this.authenticationService.Login(loginModel);
 
             if (result.Succeeded)
             {
@@ -71,7 +71,7 @@
                 return this.View();
             }
 
-            AuthenticationResult result = await this.authenticationService.Register(registerModel);
+            var result = await this.authenticationService.Register(registerModel);
 
             if (result.Succeeded)
             {

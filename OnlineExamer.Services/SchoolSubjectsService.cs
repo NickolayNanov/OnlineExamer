@@ -19,7 +19,7 @@
 
         public IEnumerable<SchooolSubjectViewModel> AllSubjects()
         {
-            IEnumerable<SchooolSubjectViewModel> subjects = this.subjectsRepository
+            var subjects = this.subjectsRepository
                 .AllAsNoTracking(x => !string.IsNullOrWhiteSpace(x.Name))
                 .Select(sub => new SchooolSubjectViewModel() { Name = sub.Name });
 

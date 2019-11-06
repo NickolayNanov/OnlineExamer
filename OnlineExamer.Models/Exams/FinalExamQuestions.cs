@@ -3,7 +3,5 @@
     public class FinalExamQuestions : ExamQuestions
     {
         public override string StartingMessage => "Начало на пробна матура";
-
-        
     }
 }

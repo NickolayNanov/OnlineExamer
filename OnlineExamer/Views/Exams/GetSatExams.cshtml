@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "GetSatExams";
+    @model IEnumerable<OnlineExamer.Models.Exams.MyExamViewModel>
+}
+
+@if (this.Model.Any())
+{
+    <h1 class="text-center mb-3">Моите изпити</h1>
+
+    <div class="container">
+        <div class="row">
+            @foreach (var exam in this.Model)
+            {
+                <table class="table col-xl-12">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="text-center" scope="col">Предмет на изпита</th>
+                            <th class="text-center" scope="col">Година</th>
+                            <th class="text-center" scope="col">Изкарани точки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var order in Model)
+                        {
+                            <tr>
+                                <th class="text-center" scope="row">@exam.ExamType</th>
+                                <th class="text-center" scope="row">@exam.Year</th>
+                                <th class="text-center" scope="row">@exam.Points</th>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <h1 class="text-center text-danger mb-3">Все още не сте решил(а) нито една матура! Мисля, че е време да са захващаш за работа!</h1>
+}

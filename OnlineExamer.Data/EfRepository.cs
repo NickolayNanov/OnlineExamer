@@ -1,14 +1,15 @@
-﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
-using OnlineExamer.Data.Common.EntityInfrastructure;
-using OnlineExamer.Data.Common.Repositories;
-using System;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-
-namespace OnlineExamer.Data
+﻿namespace OnlineExamer.Data
 {
+    using System;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.Threading.Tasks;
+
+    using Microsoft.EntityFrameworkCore;
+
+    using OnlineExamer.Data.Common.EntityInfrastructure;
+    using OnlineExamer.Data.Common.Repositories;
+
     public class EfRepository<TEntity> : IRepository<TEntity>
         where TEntity : class, IDeletable
 
@@ -28,6 +29,7 @@ namespace OnlineExamer.Data
         {
             this.Context.Set<TEntity>().Add(entity);
         }
+
         public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> expression = null)
         {
             return this.Data.FirstOrDefault(expression);

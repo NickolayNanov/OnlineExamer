@@ -11,10 +11,8 @@ namespace OnlineExamer
 
     using OnlineExamer.Data;
     using OnlineExamer.Data.Common.Repositories;
-    using OnlineExamer.Data.Repositories;
     using OnlineExamer.Data.Seeding;
     using OnlineExamer.Domain;
-    using OnlineExamer.Domain.Contracts;
     using OnlineExamer.Services;
     using OnlineExamer.Services.Contracts;
 
@@ -69,7 +67,6 @@ namespace OnlineExamer
             services.AddTransient<IUserExamsService, UserExamsService>();
 
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-            services.AddScoped<IExamRepository, ExamRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,6 +89,7 @@ namespace OnlineExamer
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

@@ -4,7 +4,9 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+
     using Microsoft.AspNetCore.Identity;
+
     using OnlineExamer.Data.Common.Repositories;
     using OnlineExamer.Data.Domain.Enums;
     using OnlineExamer.Domain;
@@ -48,9 +50,9 @@
 
         public FinalExamQuestions GetExamByYear(int year)
         {
-            IExam exam = this.repository.FirstOrDefault(x => x.YearOfCreation == year);
+            var exam = this.repository.FirstOrDefault(x => x.YearOfCreation == year);
 
-            FinalExamQuestions model = new FinalExamQuestions
+            var model = new FinalExamQuestions
             {
                 ExamType = exam.ExamType.ToString(),
                 YearOfCreation = exam.YearOfCreation,
@@ -63,7 +65,7 @@
         public IEnumerable<ExamViewModel> GetExamsByType(string examTypeAsString)
         {
             ExamType examType;
-            bool examEnum = Enum.TryParse<ExamType>(examTypeAsString, ignoreCase: true, out examType);
+            var examEnum = Enum.TryParse<ExamType>(examTypeAsString, ignoreCase: true, out examType);
 
             if (!examEnum)
             {
@@ -82,14 +84,10 @@
             return examsAsViewModels;
         }
 
-        public IEnumerable<ExamViewModel> MyExams()
-        {
-            throw new NotImplementedException();
-        }
 
         private static IList<QuestionViewModel> GetQuestionViewModels(IExam exam)
         {
-            IList<QuestionViewModel> questions = exam.Questions.Select(q => new QuestionViewModel()
+            var questions = exam.Questions.Select(q => new QuestionViewModel()
             {
                 Content = q.Content,
                 CorrectAnswer = 1,
@@ -124,13 +122,13 @@
         {
             var exam = this.repository.FirstOrDefault(exam => exam.YearOfCreation == examQuestion.YearOfCreation);
 
-            int points = 0;
+            var points = 0;
 
             for (int i = 0; i < exam.Questions.Count; i++)
             {
-                int correct = exam.Questions[i].CorrectAnswer - 1;
+                var correct = exam.Questions[i].CorrectAnswer - 1;
                 var answer = examQuestion?.Questions[i].Answers.Where(a => a.IsSelected == true).FirstOrDefault();
-                int actual = Array.IndexOf(examQuestion.Questions[i].Answers.ToArray(), answer);
+                var actual = Array.IndexOf(examQuestion.Questions[i].Answers.ToArray(), answer);
 
                 if (correct == actual)
                 {
@@ -139,12 +137,11 @@
             }
 
             var user = await this.userManager.FindByNameAsync(name);
-
-            UserExam userExam = new UserExam() { ExamId = exam.Id, UserId = user.Id };
+            var userExam = new UserExam() { ExamId = exam.Id, UserId = user.Id };
 
             if (user.UserExams.FirstOrDefault(x => x.UserId == user.Id) == null && user.UserExams.FirstOrDefault(x => x.ExamId == exam.Id) == null)
             {
-                userExam = new UserExam() { ExamId = exam.Id, UserId = user.Id };
+                userExam = new UserExam() { ExamId = exam.Id, UserId = user.Id, Points = points };
 
                 user.UserExams.Add(userExam);
                 await this.repository.SaveChangesAsync();

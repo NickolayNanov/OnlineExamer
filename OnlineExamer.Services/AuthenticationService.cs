@@ -1,7 +1,6 @@
 ﻿namespace OnlineExamer.Services
 {
     using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Identity;
@@ -12,6 +11,10 @@
 
     public class AuthenticationService : IAuthenticationService
     {
+        private const string EmailDoesNotExistErrorMessage = "Не съществува потребител с тази Е-Поща";
+        private const string InvalidPasswordErrorMessage = "Невалидна парола!";
+        private const string AlreadyTakenEmailErrorMessage = "Вероятно Е-пощата, която използвате е заета. Моля опитайте друга.";
+
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
 
@@ -35,14 +38,15 @@
 
             if (applicationUser == null)
             {
-                authenticationResult.Errors = "Не съществува потребител с тази Е-Поща";
+                authenticationResult.Errors = EmailDoesNotExistErrorMessage;
                 return authenticationResult;
             }
 
-            SignInResult result = await TryPsswordSignInAsync(loginModel, applicationUser);
+            var result = await TryPsswordSignInAsync(loginModel, applicationUser);
+
             if (!result.Succeeded)
             {
-                authenticationResult.Errors = "Невалидна парола!";
+                authenticationResult.Errors = InvalidPasswordErrorMessage;
             }
             else
             {
@@ -61,13 +65,13 @@
                 throw new ArgumentNullException();
             }
 
-            ApplicationUser applicationUser = new ApplicationUser(registerModel.Email, registerModel.FullName);
-            IdentityResult result =  await this.userManager.CreateAsync(applicationUser, registerModel.Password);
-            AuthenticationResult authenticationResult = new AuthenticationResult();
+            var applicationUser = new ApplicationUser(registerModel.Email, registerModel.FullName);
+            var result =  await this.userManager.CreateAsync(applicationUser, registerModel.Password);
+            var authenticationResult = new AuthenticationResult();
 
             if (!result.Succeeded)
             {
-                authenticationResult.Errors = "Вероятно Е-пощата, която използвате е заета. Моля опитайте друга.";
+                authenticationResult.Errors = AlreadyTakenEmailErrorMessage;
             }
             else
             {

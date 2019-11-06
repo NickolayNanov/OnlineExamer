@@ -2,12 +2,11 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
+
     using OnlineExamer.Models.Exams;
     public interface IExamsService
     {
         IEnumerable<ExamViewModel> AllExams();
-
-        IEnumerable<ExamViewModel> MyExams();
 
         IEnumerable<ExamViewModel> GetExamsByType(string examType);
 

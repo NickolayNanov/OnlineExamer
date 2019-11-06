@@ -8,5 +8,9 @@
     public interface IUserExamsService
     {
         Task<IEnumerable<MyExamViewModel>> GetExamsForUser(string user);
+
+        Task<IEnumerable<ExamViewModel>> GetExamTypesForUser(string name);
+
+        Task<IEnumerable<MyExamViewModel>> GetSatExamsByUser(string name);
     }
 }
