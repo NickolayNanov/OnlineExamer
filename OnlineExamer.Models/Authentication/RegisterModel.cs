@@ -18,7 +18,7 @@
         [Required(ErrorMessage = GlobalConstants.RequiredFullNameMessage)]
         [MinLength(3)]
         [DataType(DataType.Text)]
-        [Display(Name = "Пълно име")]
+        [Display(Name = "Име (само малки и големи латински букви, без спейсове)")]
         public string FullName { get; set; }
 
         [Required(ErrorMessage = GlobalConstants.RequiredPasswordMessage)]

@@ -21,14 +21,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var order in Model)
-                        {
-                            <tr>
+                        <tr>
+                            @if (exam.ExamType.Equals("БългарскиEзик"))
+                            {
+                                <th class="text-center" scope="row">Български език</th>
+                            }
+                            else if (exam.ExamType.Equals("АнглийскиЕзик"))
+                            {
+                                <th class="text-center" scope="row">Английски език</th>
+                            }
+                            else
+                            {
                                 <th class="text-center" scope="row">@exam.ExamType</th>
-                                <th class="text-center" scope="row">@exam.Year</th>
-                                <th class="text-center" scope="row">@exam.Points</th>
-                            </tr>
-                        }
+                            }
+                            <th class="text-center" scope="row">@exam.Year</th>
+                            <th class="text-center" scope="row">@exam.Points</th>
+                        </tr>
                     </tbody>
                 </table>
             }

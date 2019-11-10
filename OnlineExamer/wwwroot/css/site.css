@@ -457,3 +457,6 @@ a.article:hover {
     }
 }
 
+.login-text-message {
+    color: rgba(255, 0, 0, 0.6);
+}

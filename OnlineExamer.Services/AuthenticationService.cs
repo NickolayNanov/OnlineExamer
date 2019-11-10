@@ -1,6 +1,7 @@
 ﻿namespace OnlineExamer.Services
 {
     using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Identity;
@@ -17,17 +18,22 @@
 
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly RoleManager<IdentityRole> roleManager;
 
         public AuthenticationService(
-            UserManager<ApplicationUser> userManager, 
-            SignInManager<ApplicationUser> signInManager)
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
+            RoleManager<IdentityRole> roleManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.roleManager = roleManager;
         }
 
         public async Task<AuthenticationResult> Login(LoginModel loginModel)
         {
+            await SeedAdmin();
+
             if (loginModel == null)
             {
                 throw new ArgumentNullException();
@@ -56,17 +62,21 @@
             return authenticationResult;
         }
 
-        
+
 
         public async Task<AuthenticationResult> Register(RegisterModel registerModel)
         {
+            await SeedAdmin();
+
+            
             if (registerModel == null)
             {
                 throw new ArgumentNullException();
             }
 
             var applicationUser = new ApplicationUser(registerModel.Email, registerModel.FullName);
-            var result =  await this.userManager.CreateAsync(applicationUser, registerModel.Password);
+            var result = await this.userManager.CreateAsync(applicationUser, registerModel.Password);
+            await this.userManager.AddToRoleAsync(applicationUser, "User");
             var authenticationResult = new AuthenticationResult();
 
             if (!result.Succeeded)
@@ -100,6 +110,32 @@
                                 loginModel.Password,
                                 false,
                                 false);
+        }
+
+
+        private async Task SeedAdmin()
+        {
+            await SeedRoles();
+            var admin = new ApplicationUser("admin@admin.bg", "Admin Admin Admin");
+
+            if (!this.userManager.Users.Any(user => user.UserName == "admin@admin.bg"))
+            {
+                await this.userManager.CreateAsync(admin, "admin123");
+                await this.userManager.AddToRoleAsync(admin, "Admin");
+            }
+        }
+
+        private async Task SeedRoles()
+        {
+            if (!this.roleManager.Roles.Any())
+            {
+                IdentityRole[] roles = new IdentityRole[] { new IdentityRole("Admin"), new IdentityRole("User") };
+
+                for (int i = 0; i < roles.Length; i++)
+                {
+                    await this.roleManager.CreateAsync(roles[i]);
+                }
+            }
         }
     }
 }

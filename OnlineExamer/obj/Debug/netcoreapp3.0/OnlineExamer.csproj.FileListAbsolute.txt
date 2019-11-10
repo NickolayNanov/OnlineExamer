@@ -294,7 +294,6 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\R
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\ExamResult.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\LoadingExam.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\SolveExam.cshtml.g.cs
-D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Home\About.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Home\Contacts.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Home\FAQ.cshtml.g.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs

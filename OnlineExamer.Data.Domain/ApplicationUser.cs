@@ -17,7 +17,7 @@
             this.Id = Guid.NewGuid().ToString();
 
             this.Email = email;
-            this.UserName = email;
+            this.UserName = fullName;
             this.FullName = fullName;
             this.UserExams = new HashSet<UserExam>();
         }
