@@ -5,11 +5,13 @@
     int index = 1;
 }
 
-<h1 class="text-center">Училищни предмети</h1>
-
-<p>
-    <h3 class="text-center login-text-message">За да решавате матури трябва да си създадете акаунт!</h3>
-</p>
+<h1 class="text-center">Всички предмети, които платформата поддържа</h1>
+@if (!this.User.Identity.IsAuthenticated)
+{
+    <p>
+        <h3 class="text-center login-text-message">За да решавате матури трябва да си създадете акаунт!</h3>
+    </p>
+}
 <table class="table table-hover">
     <thead class="subject-table">
         <tr>
@@ -29,7 +31,6 @@
 </table>
 
 <div>
-    <h1 class="text-center">Всички предмети, които платформата поддържа</h1>
     <p>Това са най-често търсените предмети, но ако смятате, че някои предмет липсва се свържете с мен на е-поща: nickolaynanov17@gmail.com</p>
 
 </div>
