@@ -16,7 +16,7 @@
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var model = (RegisterModel)value;
-            var regex = new Regex(@"^[A-Za-z0-0-_]+[\d]*@[a-z]+\.[a-z]+$");
+            var regex = new Regex(@"^[A-Za-z0-0-_]+[0-9-_]*@[a-z]+\.[a-z]+$");
 
             if(!regex.IsMatch(model.Email) ||
                 model.FullName.Length <= 0 ||

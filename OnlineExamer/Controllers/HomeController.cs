@@ -12,11 +12,6 @@
         {
         }
 
-        public IActionResult Index()
-        {
-            return this.View();
-        }
-
         [HttpGet]
         public IActionResult Privacy()
         {

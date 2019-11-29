@@ -5,5 +5,9 @@
 
     public class BaseController : Controller
     {
+        public virtual IActionResult Index()
+        {
+            return this.View();
+        }
     }
 }

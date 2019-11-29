@@ -22,4 +22,12 @@
     <ProjectReference Include="..\OnlineExamer.Services\OnlineExamer.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\SchoolSubjects\" />
+    <Folder Include="Views\Admin\Exams\" />
+    <Folder Include="Views\Admin\SchoolSubjects\" />
+  </ItemGroup>
+
 </Project>

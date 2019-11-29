@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "_Layout";
+    @model IEnumerable<OnlineExamer.Models.Exams.ExamViewModel>
+}
+
+<h3 class="text-center mb-5">Матури</h3>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <span>Брой матури: @Model.Count()</span>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div>
+                <a class="btn container card-button exam-button">Добави матура</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <a class="btn container card-button exam-button">Всички матури</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,3 +12,4 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netcorea
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Common.AssemblyInfo.cs
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Common.dll
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Common.pdb
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer.Common\obj\Debug\netcoreapp3.0\OnlineExamer.Common.csprojAssemblyReference.cache

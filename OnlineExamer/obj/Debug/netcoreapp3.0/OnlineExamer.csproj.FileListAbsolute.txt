@@ -311,3 +311,5 @@ D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\O
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\OnlineExamer.dll
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\OnlineExamer.pdb
 D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Exams\GetSatExams.cshtml.g.cs
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Views\Home\Error.cshtml.g.cs
+D:\OnlineExamer\OnlineExamer\OnlineExamer\OnlineExamer\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Exams\Index.cshtml.g.cs

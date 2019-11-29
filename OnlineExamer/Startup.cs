@@ -28,8 +28,6 @@ namespace OnlineExamer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
@@ -51,6 +49,13 @@ namespace OnlineExamer
                 .AddDefaultUI();
 
             services
+                .AddMvc(options =>
+                {
+                    options.EnableEndpointRouting = false;
+                })
+                .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
+
+            services
                 .Configure<CookiePolicyOptions>(options =>
                 {
                     // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -59,7 +64,6 @@ namespace OnlineExamer
                     options.ConsentCookie.Name = ".AspNetCore.ConsentCookie";
                 });
 
-            services.AddControllersWithViews();
 
             services.AddTransient<IAuthenticationService, AuthenticationService>();
             services.AddTransient<ISchoolSubjectsService, SchoolSubjectsService>();
@@ -81,7 +85,8 @@ namespace OnlineExamer
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
+                app.UseExceptionHandler("/Home/Error");
             }
             else
             {
@@ -98,12 +103,10 @@ namespace OnlineExamer
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.UseMvc(routes =>
             {
-                endpoints.MapDefaultControllerRoute();
-                endpoints.MapControllerRoute(
-                                    name: "area",
-                                    pattern: "{area}/{controller}/{action}/{index?}");
+                routes.MapRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

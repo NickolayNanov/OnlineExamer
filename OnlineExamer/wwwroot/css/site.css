@@ -329,26 +329,26 @@ a.article:hover {
     position: relative;
 }
 
-.si .si-label {
-    display: inline-block;
-    padding-left: var(--guter);
-    color: var(--color-label);
-    vertical-align: text-top;
-}
-
-.si > input {
-    visibility: hidden;
-}
-
-    .si > input[type="checkbox"],
-    .si > input[type="radio"] {
-        clip-path: polygon(0 0);
+    .si .si-label {
+        display: inline-block;
+        padding-left: var(--guter);
+        color: var(--color-label);
+        vertical-align: text-top;
     }
 
-.si .si-label::before,
-.si .si-label::after {
-    transition: all 0.2s ease-in-out;
-}
+    .si > input {
+        visibility: hidden;
+    }
+
+        .si > input[type="checkbox"],
+        .si > input[type="radio"] {
+            clip-path: polygon(0 0);
+        }
+
+    .si .si-label::before,
+    .si .si-label::after {
+        transition: all 0.2s ease-in-out;
+    }
 
     /* an element for both checkbox and radio */
     .si .si-label::before {
@@ -429,7 +429,7 @@ a.article:hover {
         }
 
         .rolldown-list li:nth-child(2n+1) {
-            background-color:rgb(129, 148, 241);
+            background-color: rgb(129, 148, 241);
             color: white;
         }
 
@@ -459,4 +459,44 @@ a.article:hover {
 
 .login-text-message {
     color: rgba(255, 0, 0, 0.6);
+}
+
+/*admin panel*/
+.transparent_btn {
+    display: inline-block;
+    padding: 10px 14px;
+    color: rgb(129, 148, 241);
+    border: 1px solid #FFF;
+    font-size: 24px;
+    line-height: 120%;
+    background-color: rgba(255,255,255, 0);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: background-color 300ms ease;
+    -moz-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    text-decoration-color: aliceblue;
+    height: 500px;
+    width: 500px;
+    color: white;
+    line-height: 500px;
+}
+
+.transparent_btn:hover {
+    background-color: rgba(255,255,255, 0.3);
+    color: #FFF;
+}
+
+.transparent_btn.blue {
+    background: rgb(129, 148, 241);
+    color: white;
+    border-color: rgb(129, 148, 241);
+}
+
+.transparent_btn.blue:hover {
+    background-color: white;
+    color: rgb(129, 148, 241);
 }
