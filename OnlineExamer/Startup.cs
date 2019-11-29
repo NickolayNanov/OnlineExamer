@@ -79,7 +79,6 @@ namespace OnlineExamer
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
                 var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-
                 Seeder.Seed(dbContext, serviceScope.ServiceProvider);
             }
 
